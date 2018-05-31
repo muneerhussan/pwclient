@@ -11,12 +11,17 @@ import { APP_ROOT } from '@angular/core/src/di/scope';
 import { RouterModule,Routes} from '@angular/router';
 import { SiteLayoutComponent } from './site-layout/site-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CreateGigComponent } from './create-gig/create-gig.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const appRoutes : Routes=[
   
   {path:'home' , component:SiteLayoutComponent },
   {path:'profile', component : ProfileComponent},
   {path:'login', component: LoginComponent},
+  {path:'dashboard', component:DashboardComponent},
+  {path:'create_gig',component:CreateGigComponent},
+  {path:'settings',component:SettingsComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
 ]
 @NgModule({
@@ -29,7 +34,9 @@ const appRoutes : Routes=[
     ServicesBarComponent,
     ProfileComponent,
     SiteLayoutComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateGigComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

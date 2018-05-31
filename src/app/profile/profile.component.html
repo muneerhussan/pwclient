@@ -1,3 +1,516 @@
-<p>
-  profile works!
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+
+ <title>Profile</title>
+ 		<script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+	<!--navbar and img slider-->
+		<div>
+		<nav class="navbar navbar-expand-lg navbar-default fixed-top">		
+		<!--main nav bar-->
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+	<a href="new1.html" class="navbar-brand" style="padding-top:0px;">
+	<img src="img1/logo.png" alt="Logo" style="width:65px;"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right" style="margin-right:5px;">
+				<form class="navbar-form navbar-left">
+		<div class="input-group">
+		<input type="text" id="search" class="form-control" placeholder="Find Services">
+<span class="input-group-btn">
+  <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-search"style="color:white;padding:3px;"></span></button>
+ </span>
+		</div>
+		</form>
+				<li><a href="new1.html" class="active">Home</a></li>
+				<li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a href="Carpenter.html" class="dropdown-item">Carpenter</a></li>
+					<li><a href="paint.html" class="dropdown-item">Decorator</a></li>
+					<li><a href="plumber.html" class="dropdown-item">Plumber</a></li>
+					<li><a href="gas.html" class="dropdown-item">Gas</a></li>
+					<li><a href="roofing.html" class="dropdown-item">Roofing</a></li>
+					<li><a href="handyman.html" class="dropdown-item">HandyMan</a></li>
+					<li><a href="lock.html" class="dropdown-item">Locks</a></li>
+					<li><a href="alarm.html" class="dropdown-item">Alarms</a></li>
+					<li><a href="clean.html" class="dropdown-item">Cleaner</a></li>
+					<li><a href="other.html" class="dropdown-item">Others</a></li>
+				</ul>
+				</li>
+				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Selling</a>
+				<ul class="dropdown-menu">
+					<li><a href="#" class="dropdown-item">Orders</a></li>
+					<li><a href="gig.html" class="dropdown-item">Gigs</a></li>
+				</ul></li>
+				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Buying</a>
+				<ul class="dropdown-menu">
+					<li><a href="#" class="dropdown-item">How We Work</a></li>
+					<li><a href="manage-request.html" class="dropdown-item">Manage Request</a></li>
+				</ul></li>
+				<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item dropdown">
+				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="img/me1.jpg" class="avatar" alt="Avatar"><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="profile.html" class="dropdown-item"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+					<li><a href="setting.html" class="dropdown-item"><i class="glyphicon glyphicon-tasks"></i> Settings</a></li>
+					<li class="divider dropdown-divider"></li>
+					<li><a href="new1.html" class="dropdown-item"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+				</ul>
+			</li>
+		</ul>
+			</ul>
+			</div>
+		</nav>
+	</div>
+	
+	<!--Profile body or grid-->
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-xs-012 first_section-profile">
+			<section class="first_section">
+				<article>
+				<div class="card">
+					<img class="card-img-top rounded-circle" src="img/me1.jpg" alt="Profile Img">
+					<span class="badge badge-pill badge-success pull-right">Online</span>
+				<div class="card-body">
+					<div class="User-name text-center">Waheed Shahzad</div>
+					<div class="User-exprt text-center">
+					Web Designer <span class="glyphicon glyphicon-pencil text-muted"></span></div>
+					<button class="btn btn-success btn-block">Preview Public Mode</button>
+					<p class="pull-right">pakistan</p>
+					<p><span class="glyphicon glyphicon-map-marker"></span> From</p>
+					<p class="pull-right">Dec 2015</p>
+					<p><span class="glyphicon glyphicon-user"></span> Member Since</p>
+					<p class="pull-right">6 Hours</p>
+					<p><span class="glyphicon glyphicon-time"></span> Avg. Response Time</p>
+				</div>
+				<div class="card-footer">
+					<!--on off button-->
+				<div class="vacation_mode pull-right">
+					<div class="inner">
+						<div class="toggle">
+						</div>
+					</div>
+				</div>
+					<p><span class="glyphicon glyphicon-plane"></span>Vacation Mode</p>
+	
+				</div>
+				</div>
+				</article>
+			</section>
+			
+	<section class="onechild">
+		<!--Description-->
+		<div id="accordion">
+		<div class="card">
+		<div class="card-header" id="description">
+	  <a class="pull-right" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Edit Description</a>
+		   <h5><b>Description</b></h5>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="description" data-parent="#accordion">
+      <div class="card-body">
+	 <form class="form-group">
+		<textarea class="form-control" id="edit_descript">
+		</textarea>
+		<div class="row">
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-danger profile-btn">Cancel</button>
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-success profile-btn">Update</button>
+		</div>
+		</form>
+			</div>
+		</div>
+		</div>
+	</div>
+
+			<!--Language-->
+		<div id="add_language">
+  <div class="card">
+    <div class="card-header" id="language">
+	  <a class="pull-right" data-toggle="collapse" data-target="#collapselang" aria-controls="collapselang">
+          Add New</a>
+		   <h5><b>Language</b></h5>
+		   <p>English <samp class="text-muted">-Basic </samp>
+		   <a class="glyphicon glyphicon-pencil" data-toggle="collapse" data-target="#collapselang" aria-controls="collapselang">
+		   </a></p>
+    </div>
+
+    <div id="collapselang" class="collapse" aria-labelledby="language" data-parent="#add_language">
+      <div class="card-body">
+
+	 <form class="form-group">
+		<input type="text" class="form-control" id="languag">
+		<select class="form-control" id="lang_level">
+      <option selected> Language Level</option>
+	  <option>Basic</option>
+      <option>Conversational</option>
+      <option>Fluent</option>
+      <option>Native/Bilingual</option>
+    </select>
+		<div class="row">
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-danger profile-btn">Cancel</button>
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-success profile-btn">Add</button>
+		</div>
+		</form>
+</div>
+    </div>
+  </div>
+  </div>
+ 
+		<!--Linked Account-->
+		<div id="link_data">
+			<h5 data-toggle="tooltip" title ="Linking to online social networks add credibility to your profile.You may add more than one. 
+Note:Your personal information will not displayed to the buyer."><b>Linked Account</b></h5>
+			<a href="https://www.facebook.com/"><span class="glyphicon glyphicon-plus"></span> Facebook</a><br>
+			<a href="https://plus.google.com/people"><span class="glyphicon glyphicon-plus"></span> Google</a><br>
+			<a href="https://dribbble.com/"><span class="glyphicon glyphicon-plus"></span> Dribble</a><br>
+			<a href="https://stackoverflow.com/"><span class="glyphicon glyphicon-plus"></span> Stack Overflow</a><br>
+			<a href="https://uk.linkedin.com/"><span class="glyphicon glyphicon-plus"></span> Linkedin</a>
+		</div>
+		<!--Skills-->
+		<div id="skill">
+  <div class="card">
+    <div class="card-header" id="add_skill">
+	  <a class="pull-right" data-toggle="collapse" data-target="#collapseskill" aria-controls="collapseskill">
+          Add New</a>
+		   <h5><b>Skills</b></h5>
+    </div>
+
+    <div id="collapseskill" class="collapse" aria-labelledby="add_skill" data-parent="#skill">
+      <div class="card-body">
+
+	 <form class="form-group">
+		<input type="text" class="form-control" id="skill_data" Placeholder="Add Skill(E.g Voice Tailent)">
+		<select class="form-control" id="exp_level">
+      <option selected> Experience Level</option>
+	  <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Expert</option>
+    </select>
+		<div class="row">
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-danger profile-btn">Cancel</button>
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-success profile-btn">Add</button>
+		</div>
+		</form>
+</div>
+    </div>
+  </div>
+  </div>
+
+		<!--Education-->
+		<div id="education_data">
+    <div id="add_edu">
+	  <a class="pull-right" data-toggle="collapse" data-target="#education" aria-controls="education">
+          Add New</a>
+		   <h5><b>Education</b></h5>
+    </div>
+
+    <div id="education" class="collapse" aria-labelledby="add_edu" data-parent="#education_data">
+
+	 <form class="form-group">
+		<select class="form-control" id="eduCountry">
+      <option selected>Country of College/University</option>
+	  <option>Pakistan</option>
+      <option>India</option>
+      <option>Us</option>
+	  <option>Uk</option>
+	  <option>Jermany</option>
+	  <option>Singapore</option>
+    </select>
+	<input type="text" class="form-control" id="clgName" Placeholder="College/Uniersity Name">
+	<div class="form-group">
+		<select class="form-control" id="degreeTitle">
+      <option selected>Title</option>
+	  <option>Associated</option>
+      <option>Cirtificated</option>
+      <option>B.A</option>
+	  <option>B.Sc</option>
+	  <option>M.A</option>
+	  <option>M.B.A</option>
+	  <option>M.Sc</option>
+	  <option>P.Hd</option>
+	  <option>M.D</option>
+	  <option>LLB</option>
+    </select>
+		<input type="text" class="form-control" id="degree" Placeholder="Degree">
+	</div>
+	<select class="form-control" id="degreeYear">
+      <option selected>Year of Graduation</option>
+	  <option>1990</option>
+      <option>1991</option>
+      <option>1992</option>
+	  <option>1993</option>
+	  <option>1994</option>
+	  <option>1995</option>
+	  <option>1996</option>
+	  <option>1997</option>
+	  <option>1998</option>
+	  <option>1999</option>
+	  <option>2001</option>
+      <option>2002</option>
+      <option>2003</option>
+	  <option>2004</option>
+	  <option>2005</option>
+	  <option>2006</option>
+	  <option>2007</option>
+	  <option>2008</option>
+	  <option>2009</option>
+	  <option>2010</option>
+	  <option>2011</option>
+	  <option>2012</option>
+	  <option>2013</option>
+	  <option>2014</option>
+	  <option>2015</option>
+	  <option>2016</option>
+	  <option>2017</option>
+	  <option>2018</option>
+    </select>
+		<div class="row">
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-danger profile-btn">Cancel</button>
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-success profile-btn">Add</button>
+		</div>
+		</form>
+    </div>
+  </div>
+		<!--Certification-->
+		<div id="certification_data">
+    <div id="add_certify">
+	  <a class="pull-right" data-toggle="collapse" data-target="#certify" aria-controls="certify">
+          Add New</a>
+		   <h5><b>Certification</b></h5>
+    </div>
+    <div id="certify" class="collapse" aria-labelledby="add_certify" data-parent="#certification_data">
+	 <form class="form-group">
+	<input type="text" class="form-control" id="award" Placeholder="Certificate of Award">
+	<input type="text" class="form-control" id="award_from" Placeholder="Certified From (E.g Adobe)">
+	<select class="form-control" id="award_year">
+	<option selected>Year</option>
+	  <option>1990</option>
+      <option>1991</option>
+      <option>1992</option>
+	  <option>1993</option>
+	  <option>1994</option>
+	  <option>1995</option>
+	  <option>1996</option>
+	  <option>1997</option>
+	  <option>1998</option>
+	  <option>1999</option>
+	  <option>2001</option>
+      <option>2002</option>
+      <option>2003</option>
+	  <option>2004</option>
+	  <option>2005</option>
+	  <option>2006</option>
+	  <option>2007</option>
+	  <option>2008</option>
+	  <option>2009</option>
+	  <option>2010</option>
+	  <option>2011</option>
+	  <option>2012</option>
+	  <option>2013</option>
+	  <option>2014</option>
+	  <option>2015</option>
+	  <option>2016</option>
+	  <option>2017</option>
+	  <option>2018</option>
+	</select>
+		<div class="row">
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-danger profile-btn">Cancel</button>
+		<button class="col-lg-5 col-md-5 col-sm-5 col-xs-5 btn btn-success profile-btn">Add</button>
+		</div>
+		</form>
+    </div>
+  </div>
+		
+	</section>
+		</div>
+		
+		<div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 col-xs-012">
+			<section class="second_section">
+			<div class="row">
+					<!--First Card-->
+		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="assets/profile/car4.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+    </div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-option-horizontal"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="assets/profile/car9.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+    </div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-option-horizontal"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="assets/profile/car10.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+    </div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-option-horizontal"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="assets/profile/car1.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+    </div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-option-horizontal"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="assets/profile/car2.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+    </div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-option-horizontal"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <div class="card-body">
+	<div class="new-gig">
+	<a href="create_gig"><span class="text-success glyphicon glyphicon-plus"></span></a>
+	</div>
+      <p class="text-center">Create A New Gig</p>
+    </div>
+  </div>
+	</div>
+		   </div>
+			</section>
+		</div>
+	</div>
+
+<!--list in footer-->
+ <section>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <h4><b>Services</b></h4>
+                        <ul>
+                            <li><a href="paint.html">Decorating</a></li>
+                            <li><a href="plumber.html">Plumbering</a></li>
+                            <li><a href="lock.html">Locks & Glazing</a></li>
+                            <li><a href="electric.html">Electrical</a></li>
+							<li><a href="security.html">Security </a></li>
+                            <li><a href="clean.html">Cleaning</a></li>
+                            <li><a href="gas.html">Gas Check</a></li>
+							<li><a href="other.html">Others</a></li>
+                        </ul>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <h4><b>About Us</b></h4>
+                        <p>A One Stop Shop for all your Property Maintenance needs.
+						As experts in the field with many years in the business,
+						our objective is simple:to provide a superior service at a very competitive price.</p> 
+                </div><!--/.col-md-3-->
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <h4><b>Contact Details</b></h4>
+                        <p>Employment Resource Center
+						  Model Town Lahore,Pakistan</p>
+						<p>Customer Care Line:<br>
+						+923046080781</p>
+                </div><!--/.col-md-3-->
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <h4><b>Opening Hours</b></h4>
+                        <p>We are open 24/7 for emergencies:<br>
+						Monday - Sunday</p>   
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section>
+
+	<!--/#bottom-->
+
+    <footer id="foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                    &copy; 2018 <a href="new1.html" title=" Waheed Shahzad">Resource Center</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                    <ul class="pull-right">
+                        <li><a href="new1.html">Home</a></li>
+                        <li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Services <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a href="Carpenter.html" class="dropdown-item">Carpenter</a></li>
+					<li><a href="paint.html" class="dropdown-item">Decorator</a></li>
+					<li><a href="plumber.html" class="dropdown-item">Plumber</a></li>
+					<li><a href="gas.html" class="dropdown-item">Gas</a></li>
+					<li><a href="roofing.html" class="dropdown-item">Roofing</a></li>
+					<li><a href="handyman.html" class="dropdown-item">HandyMan</a></li>
+					<li><a href="lock.html" class="dropdown-item">Locks</a></li>
+					<li><a href="alarm.html" class="dropdown-item">Alarms</a></li>
+					<li><a href="clean.html" class="dropdown-item">Cleaner</a></li>
+					<li><a href="other.html" class="dropdown-item">Others</a></li>
+				</ul>
+				</li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#popupLoginform">Sign In</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#popupJoinform">Join</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+	</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+<!-- on off button-->
+<script>
+$(document).ready(function(){
+$('.toggle').click(function(){
+$('.inner').toggleClass('active')
+})
+})
+</script>
+
+<!--ligin form script-->
+<script>
+// Get the modal
+var modal = document.getElementById('mdlid1');
+var modal2 = document.getElementById('mdlid2');
+</script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>

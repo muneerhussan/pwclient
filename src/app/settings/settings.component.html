@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Setting</title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+	<div class="container-fluid">
+	<!--navbar and img slider-->
+	
+		<div>
+		<nav class="navbar navbar-expand-lg navbar-default fixed-top">		
+		<!--main nav bar-->
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+	<a href="new1.html" class="navbar-brand" style="padding-top:0px;">
+	<img src="img1/logo.png" alt="Logo" style="width:65px;"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right" style="margin-right:5px;">
+				<form class="navbar-form navbar-left">
+		<div class="input-group">
+		<input type="text" id="search" class="form-control" placeholder="Find Services">
+<span class="input-group-btn">
+  <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-search"style="color:white;padding:3px;"></span></button>
+ </span>
+		</div>
+		</form>
+				<li><a href="new1.html" class="active">Home</a></li>
+				<li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a href="Carpenter.html" class="dropdown-item">Carpenter</a></li>
+					<li><a href="paint.html" class="dropdown-item">Decorator</a></li>
+					<li><a href="plumber.html" class="dropdown-item">Plumber</a></li>
+					<li><a href="gas.html" class="dropdown-item">Gas</a></li>
+					<li><a href="roofing.html" class="dropdown-item">Roofing</a></li>
+					<li><a href="handyman.html" class="dropdown-item">HandyMan</a></li>
+					<li><a href="lock.html" class="dropdown-item">Locks</a></li>
+					<li><a href="alarm.html" class="dropdown-item">Alarms</a></li>
+					<li><a href="clean.html" class="dropdown-item">Cleaner</a></li>
+					<li><a href="other.html" class="dropdown-item">Others</a></li>
+				</ul>
+				</li>
+				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Selling</a>
+				<ul class="dropdown-menu">
+					<li><a href="#" class="dropdown-item">Orders</a></li>
+					<li><a href="gig.html" class="dropdown-item">Gigs</a></li>
+				</ul></li>
+				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Buying</a>
+				<ul class="dropdown-menu">
+					<li><a href="#" class="dropdown-item">How We Work</a></li>
+					<li><a href="manage-request.html" class="dropdown-item">Manage Request</a></li>
+				</ul></li>
+				<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item dropdown">
+				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="img/me1.jpg" class="avatar" alt="Avatar"><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="profile.html" class="dropdown-item"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+					<li><a href="setting.html" class="dropdown-item"><i class="glyphicon glyphicon-tasks"></i> Settings</a></li>
+					<li class="divider dropdown-divider"></li>
+					<li><a href="new1.html" class="dropdown-item"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+				</ul>
+			</li>
+		</ul>
+			</ul>
+			</div>
+		</nav>
+	</div>
+	
+<div class="container-fluid" id="topbar">
+<!--gigs list view-->
+	  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#acount-set">Account</a></li>
+    <li><a data-toggle="tab" href="#security-set">Security</a></li>
+    <li><a data-toggle="tab" href="#notic-set">Notification</a></li>
+  </ul>
+</div>
+
+<!-- Create a new Gig-->
+<div class="container-fluid">
+  <div class="tab-content newgig">
+  <!-- 1st tab-->
+    <div id="acount-set" class="tab-pane fade in active">
+	<div class="acount-seting">
+<form>
+  <div class="form-group">
+    <label for="fullName">Full Name</label>
+    <input type="text" class="form-control" id="fullName">
+  </div>
+  <div class="form-group">
+    <label for="changeEmail">Email</label>
+    <input type="email" class="form-control" id="changeEmail">
+  </div>
+    <div class="form-group">
+    <label for="onlineStatus">Online Status</label>
+    <select class="form-control" id="onlineStatus">
+      <option>Go Ofline For...</option>
+      <option>1 Hour</option>
+      <option>1 Day</option>
+      <option>1 Week</option>
+      <option>Forever</option>
+    </select>
+  </div>
+   <button class="btn btn-lg btn-default">Cancel</button>
+  <button type="submit" class="btn btn-success btn-lg">Save Changes</button>
+</form>
+	</div>
+		<div class="deactive-acount">
+		<label><h3>Account Deactivation</h3></label>
+		<ul>
+		<li><b>What happens when you deactivate your account?</b></li>
+		<li>(1) Your Profile and Gigs won't be shown on anymore.</li>
+		<li>(2) Active orders will be cancelled.</li>
+		<li>(3) You won't be able to re-activate your Gigs.</li>
+		</ul>
+		<form>
+		<div class="form-group">
+    <label for="leaveReason">I'm leaving because...</label>
+    <input type="text" class="form-control" id="leaveReason"placeholder="Give a reason">
+		</div>
+		 <button class="btn btn-lg btn-success">Deactivate Account</button>
+		</form>
+		</div>
+	</div>
+	<!-- 2nd tab-->
+	<div id="security-set" class="tab-pane fade">
+		<div class="security-seting">
+	<h4 style="padding:10px;border-bottom:1px solid rgb(198,199,197);">Change Password</h4>
+	<form>
+  <div class="form-group">
+    <label for="curentPass">Current Password</label>
+    <input type="password" class="form-control" id="curentPass">
+  </div>
+  <div class="form-group">
+    <label for="newpassword">New Password</label>
+    <input type="password" class="form-control" id="newpassword">
+  </div>
+    <div class="form-group">
+    <label for="cnfrmpassword">Confirm Password</label>
+    <input type="password" class="form-control" id="cnfrmpassword">
+  </div>
+   <button class="btn btn-lg btn-default">Cancel</button>
+  <button type="submit" class="btn btn-success btn-lg">Save Changes</button>
+  </form>
+		</div>
+	</div>
+	<!--3rd tab-->
+	<div id="notic-set" class="tab-pane fade">
+	<div class="notification">
+	<h4 style="padding:10px;border-bottom:1px solid rgb(198,199,197);">Notification</h4>
+	<div class="row">
+	<div class="col-md-6 col-sm-6 col-xs-6">
+	<label>Type</label>
+	<p>Inbox Messages</p>
+	<p>Order Messages</p>
+	<p>Order Statuses</p>
+	</div>
+	<div class="col-md-6 col-sm-6 col-xs-6">
+	<label>Email</label><br>
+	<input type="checkbox" checked><br>
+	<input type="checkbox" checked><br>
+	<input type="checkbox" checked><br>
+	</div>
+	</div>
+	</div>
+	<div class="realTimeNotic">
+	<h4 style="padding:10px;border-bottom:1px solid rgb(198,199,197);">Real-Time Notifications</h4>
+	<div class="row">
+	<div class="col-md-6 col-sm-6 col-xs-6">
+	<p>Enable/disable real-time notification</p>
+	<p>Enable/disable sound</p>
+	</div>
+	<div class="col-md-6 col-sm-6 col-xs-6">
+	<div class="aceptGig">
+	<input type="checkbox" name="chkGigAcept">
+	</div>
+	<div class="aceptGig">
+	<input type="checkbox" name="chkGigAcept">
+	</div>
+	</div>
+</div>
+  <button type="submit" class="btn btn-success btn-lg">Save Changes</button>
+</div>
+	</div>
+
+</div>
+</div>
+<!--list in footer-->
+ <section>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="widget">
+                        <h4><b>Services</b></h4>
+                        <ul>
+                            <li><a href="paint.html">Decorating</a></li>
+                            <li><a href="plumber.html">Plumbering</a></li>
+                            <li><a href="lock.html">Locks & Glazing</a></li>
+                            <li><a href="electric.html">Electrical</a></li>
+							<li><a href="security.html">Security </a></li>
+                            <li><a href="clean.html">Cleaning</a></li>
+                            <li><a href="gas.html">Gas Check</a></li>
+							<li><a href="other.html">Others</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="widget">
+                        <h4><b>About Us</b></h4>
+                        <p>A One Stop Shop for all your<br> Property Maintenance needs.<br>
+						As experts in the field with<br> many years in the business, <br>
+						our objective is simple:<br> to provide a superior service<br> at a very competitive price.</p>
+                    </div> 
+                </div><!--/.col-md-3-->
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="widget">
+                        <h4><b>Contact Details</b></h4>
+                        <p>Employment Resource Center<br>
+						  Model Town Lahore,Pakistan</p>
+						<p>Customer Care Line:<br>
+						+923046080781</p>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="widget">
+                        <h4><b>Opening Hours</b></h4>
+                        <p>We are open 24/7 for emergencies:<br>
+						Monday - Sunday</p>
+						
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section>
+	<!--/#bottom-->
+    <footer id="foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2018 <a href="new1.html" title=" Waheed Shahzad">Resource Center</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="new1.html">Home</a></li>
+                        <li><a href="serv.html">Services </a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#popupLoginform">Sign In</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#popupJoinform">Join</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+</div>
+</body>
+</html>
