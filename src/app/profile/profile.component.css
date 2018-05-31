@@ -1,0 +1,45 @@
+.first_section-profile{
+	margin-top:20px;
+	padding-top:20px;
+}
+.first_section{
+	background-color:white;
+	width:90%;
+	height:100%;
+	color:black;
+	padding:20px;
+	line-height:2rem;
+	border:1px solid;
+	border-color:rgb(198,199,197);
+	font-size:15px;
+}
+.first_section p{
+	font-size:17px;
+}
+.first_section img{
+	width:35%;
+	margin-left:30%;
+	border-radius:50%;
+}
+.first_section .badge{
+	background-color:white;
+	color:green !important;
+	border:0.5px solid green;
+	margin:10px;
+	width:50px;
+}
+.first_section .btn-block{
+	padding:2%;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.first_section .User-name{
+	font-size:20px;
+	font-weight:bold;
+}
+.first_section .card-footer{
+	background-color:rgb(246,248,249);
+	padding:5%;
+	padding-left:0px;
+    height:25%;
+}

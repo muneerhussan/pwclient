@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Main Page</title>
+
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/css1.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+	<div class="container-fluid">
+	<!--navbar and img slider-->
+		<div>
+		<nav class="navbar navbar-expand-lg navbar-default fixed-top">		
+		<!--main nav bar-->
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+	<a href="new1.html" class="navbar-brand" style="padding-top:0px;">
+	<img src="img1/logo.png" alt="Logo" style="width:65px;"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right" style="margin-right:5px;">
+				<form class="navbar-form navbar-left">
+		<div class="input-group">
+		<input type="text" id="search" class="form-control" placeholder="Find Services">
+<span class="input-group-btn">
+  <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-search"style="color:white;padding:3px;"></span></button>
+ </span>
+		</div>
+		</form>
+				<li><a href="new1.html" class="active">Home</a></li>
+				<li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a href="Carpenter.html" class="dropdown-item">Carpenter</a></li>
+					<li><a href="paint.html" class="dropdown-item">Decorator</a></li>
+					<li><a href="plumber.html" class="dropdown-item">Plumber</a></li>
+					<li><a href="gas.html" class="dropdown-item">Gas</a></li>
+					<li><a href="roofing.html" class="dropdown-item">Roofing</a></li>
+					<li><a href="handyman.html" class="dropdown-item">HandyMan</a></li>
+					<li><a href="lock.html" class="dropdown-item">Locks</a></li>
+					<li><a href="alarm.html" class="dropdown-item">Alarms</a></li>
+					<li><a href="clean.html" class="dropdown-item">Cleaner</a></li>
+					<li><a href="other.html" class="dropdown-item">Others</a></li>
+				</ul>
+				</li>
+				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Selling</a>
+				<ul class="dropdown-menu">
+					<li><a href="#" class="dropdown-item">Orders</a></li>
+					<li><a href="gig.html" class="dropdown-item">Gigs</a></li>
+				</ul></li>
+				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Buying</a>
+				<ul class="dropdown-menu">
+					<li><a href="#" class="dropdown-item">How We Work</a></li>
+					<li><a href="manage-request.html" class="dropdown-item">Manage Request</a></li>
+				</ul></li>
+				<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item dropdown">
+				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="img/me1.jpg" class="avatar" alt="Avatar"><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="profile.html" class="dropdown-item"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+					<li><a href="setting.html" class="dropdown-item"><i class="glyphicon glyphicon-tasks"></i> Settings</a></li>
+					<li class="divider dropdown-divider"></li>
+					<li><a href="new1.html" class="dropdown-item"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+				</ul>
+			</li>
+		</ul>
+			</ul>
+			</div>
+		</nav>
+	</div>
+	
+	<br>
+	
+<!--Side Bar-->
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-5 col-xs-5 col-xs-012">
+				<aside class="mainpage-side-bar">
+			<div class="main-rslt">
+				<!-- Refine Result -->
+				<h5><b>Refine Result</b></h5>
+				<ul>
+					<li>
+					<a href="#">All Categories<samp class="text-muted pull-right">(1055)</samp></a>
+					</li>
+					<li>
+					<a href="#">Handyman<samp class="text-muted pull-right">(964)</samp></a>
+					</li>
+					<li>
+					<a href="#">Plumber<samp class="text-muted pull-right">(53)</samp></a>
+					</li>
+					<li>
+					<a href="#">Carpenter<samp class="text-muted pull-right">(1055)</samp></a>
+					</li>
+					<li>
+					<a href="#">Electrics<samp class="text-muted pull-right">(53)</samp></a>
+					</li>
+					<li>
+					<a href="#">Decorator<samp class="text-muted pull-right">(1055)</samp></a>
+					</li>
+					<li>
+					<a href="#">Locks<samp class="text-muted pull-right">(964)</samp></a>
+					</li>
+					<li>
+					<a href="#">Security<samp class="text-muted pull-right">(53)</samp></a>
+					</li>
+					<li>
+					<a href="#">Other <samp class="text-muted pull-right">(964)</samp></a>
+					</li>
+				</ul>
+			</div>
+				<!--Delievery Time-->
+			<div class="main-rslt delievery-time">
+			<h5><b>Delievery Time</b></h5>
+			<form>
+				<div class="radio">
+				<label><input type="radio" name="optradio"> Up to 24 Hours</label>
+				</div>
+				<div class="radio">
+				<label><input type="radio" name="optradio"> Up to 3 Days</label>
+				</div>
+				<div class="radio">
+				<label><input type="radio" name="optradio"> Up to 7 Days</label>
+				</div>
+				<div class="radio">
+				<label><input type="radio" name="optradio" checked> Any</label>
+				</div>
+			</form>
+			</div>
+			
+			<!--Price Range-->
+			<div class="main-rslt price-range">
+				<h5><b>Price Range</b></h5>
+				<label>$ <input type="tel" size="4"></label>
+				<label> to $ <input type="tel" size="4"></label>
+				<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			<!--Price Range-->
+			<div class="main-rslt seller-status">
+				<h5><b>Seller Status</b></h5>
+				<form>
+				<input class="form-check-input" type="checkbox"> Show Online Seller
+				<samp class="text-muted pull-right">(61)</samp><br>
+				<input class="form-check-input" type="checkbox"> Available Now
+				<samp class="text-muted pull-right">(41)</samp>
+				</form>
+			</div>
+				</aside>
+		</div>
+	
+	<!--main content-->
+		<div class="col-lg-9 col-md-9 col-sm-7 col-xs-7 col-xs-012">
+			<section class="second_section">
+				<div class="row">
+					<!--main Card-->
+					
+		<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="img/car1.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+     <br><span class="glyphicon glyphicon-star">5.0 </span>
+	</div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Save In..."></span>
+		<span class="glyphicon glyphicon-heart" data-toggle="tooltip" title="Add to Favorites"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+		<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="img/car2.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+     <br><span class="glyphicon glyphicon-star">5.0</span>
+	</div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Save In..."></span>
+		<span class="glyphicon glyphicon-heart" data-toggle="tooltip" title="Add to Favorites"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+		<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="img/car3.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+		 <br><span class="glyphicon glyphicon-star">5.0</span>
+	</div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Save In..."></span>
+		<span class="glyphicon glyphicon-heart" data-toggle="tooltip" title="Add to Favorites"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+		<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="img/car1.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+     <br><span class="glyphicon glyphicon-star">5.0</span>
+	</div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Save In..."></span>
+		<span class="glyphicon glyphicon-heart" data-toggle="tooltip" title="Add to Favorites"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+		<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="child">
+		<div class="card">
+    <img class="card-img-top" src="img/car2.jpg" alt="Car image">
+    <div class="card-body">
+      <a class="card-text">I will Design Optimize Your Database using sql</a>
+    <br><span class="glyphicon glyphicon-star">5.0</span>
+	</div>
+		<div class="card-footer">
+		<span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Save In..."></span>
+		<span class="glyphicon glyphicon-heart" data-toggle="tooltip" title="Add to Favorites"></span>
+		<p class="pull-right">Started AT <b>$5</b></p>
+		</div>
+  </div>
+	</div>
+			     </div>
+			</section>
+		</div>
+	</div>
+
+<!--list in footer-->
+ <section>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <h4><b>Services</b></h4>
+                        <ul>
+                            <li><a href="paint.html">Decorating</a></li>
+                            <li><a href="plumber.html">Plumbering</a></li>
+                            <li><a href="lock.html">Locks & Glazing</a></li>
+                            <li><a href="electric.html">Electrical</a></li>
+							<li><a href="security.html">Security </a></li>
+                            <li><a href="clean.html">Cleaning</a></li>
+                            <li><a href="gas.html">Gas Check</a></li>
+							<li><a href="other.html">Others</a></li>
+                        </ul>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <h4><b>About Us</b></h4>
+                        <p>A One Stop Shop for all your Property Maintenance needs.
+						As experts in the field with many years in the business,
+						our objective is simple:to provide a superior service at a very competitive price.</p> 
+                </div><!--/.col-md-3-->
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <h4><b>Contact Details</b></h4>
+                        <p>Employment Resource Center
+						  Model Town Lahore,Pakistan</p>
+						<p>Customer Care Line:<br>
+						+923046080781</p>
+                </div><!--/.col-md-3-->
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <h4><b>Opening Hours</b></h4>
+                        <p>We are open 24/7 for emergencies:<br>
+						Monday - Sunday</p>   
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section>
+
+	<!--/#bottom-->
+
+    <footer id="foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                    &copy; 2018 <a href="new1.html" title=" Waheed Shahzad">Resource Center</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                    <ul class="pull-right">
+                        <li><a href="new1.html">Home</a></li>
+                        <li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Services <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a href="Carpenter.html" class="dropdown-item">Carpenter</a></li>
+					<li><a href="paint.html" class="dropdown-item">Decorator</a></li>
+					<li><a href="plumber.html" class="dropdown-item">Plumber</a></li>
+					<li><a href="gas.html" class="dropdown-item">Gas</a></li>
+					<li><a href="roofing.html" class="dropdown-item">Roofing</a></li>
+					<li><a href="handyman.html" class="dropdown-item">HandyMan</a></li>
+					<li><a href="lock.html" class="dropdown-item">Locks</a></li>
+					<li><a href="alarm.html" class="dropdown-item">Alarms</a></li>
+					<li><a href="clean.html" class="dropdown-item">Cleaner</a></li>
+					<li><a href="other.html" class="dropdown-item">Others</a></li>
+				</ul>
+				</li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#popupLoginform">Sign In</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#popupJoinform">Join</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+	</div>
+	</body>
+	</html>

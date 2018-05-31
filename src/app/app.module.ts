@@ -1,21 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component';
+import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { ImagesliderComponent } from './imageslider/imageslider.component';
+import { ServicesBarComponent } from './services-bar/services-bar.component';
+import { ProfileComponent } from './profile/profile.component';
+import { APP_ROOT } from '@angular/core/src/di/scope';
+import { RouterModule,Routes} from '@angular/router';
+import { SiteLayoutComponent } from './site-layout/site-layout.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
+const appRoutes : Routes=[
+  
+  {path:'home' , component:SiteLayoutComponent },
+  {path:'profile', component : ProfileComponent},
+  {path:'login', component: LoginComponent},
+  {path:'',redirectTo:'/home',pathMatch:'full'},
+]
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    MessagesComponent
+    LoginComponent,
+    FooterComponent,
+    HeaderComponent,
+    ImagesliderComponent,
+    ServicesBarComponent,
+    ProfileComponent,
+    SiteLayoutComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     // no need to place any providers due to the `providedIn` flag...

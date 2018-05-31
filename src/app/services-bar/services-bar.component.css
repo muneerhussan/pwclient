@@ -1,0 +1,25 @@
+.srvc-bar{
+	background-color:rgb(217,221,223);
+	width:100%;
+	height:auto;
+	margin:0px;
+}
+.srvc-bar p{
+	font-size:15px;
+}
+.srvc-bar img{
+	margin-top:10px;
+	margin-bottom:10px;
+	border-radius:30%;
+	width:65px;
+	height:65px;
+}
+.srvc-bar .colum{
+	border-right:1px solid white;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+.srvc-bar .colum p{
+	margin:0px;
+	padding:0px;
+}
