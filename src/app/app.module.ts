@@ -43,7 +43,7 @@ const appRoutes : Routes=[
     CreateGigComponent,
     SettingsComponent,
     DetailAboutUsComponent
-  ],
+ ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
