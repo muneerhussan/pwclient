@@ -13,6 +13,7 @@ import { SiteLayoutComponent } from './site-layout/site-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateGigComponent } from './create-gig/create-gig.component';
 import { SettingsComponent } from './settings/settings.component';
+import { SignupComponent } from './signup/signup.component';
 
 const appRoutes : Routes=[
   
@@ -22,7 +23,9 @@ const appRoutes : Routes=[
   {path:'dashboard', component:DashboardComponent},
   {path:'create_gig',component:CreateGigComponent},
   {path:'settings',component:SettingsComponent},
+  {path:'signup',component:SignupComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
+  
 ]
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ const appRoutes : Routes=[
     SiteLayoutComponent,
     DashboardComponent,
     CreateGigComponent,
-    SettingsComponent
+    SettingsComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
