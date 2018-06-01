@@ -1,1 +1,1461 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+body{
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif !important;
+	color:black;
+	background-color:rgb(246,247,245);
+	}
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 32px;
+}
+h3{
+	font-size:28px;
+}
+h4 {
+    font-size: 25px;
+}
+h5{
+font-size:20px;
+color:black;
+}
+h6{
+	font-size:18px;
+color:black;
+}
+p {
+    font-size: 15px;
+}
+button{
+	background-color:rgb(26,207,77);
+}
+a{
+text-decoration:none !important;
+color:black;
+}
+a:hover, a:focus {
+  color: rgb(26,207,77) !important;
+  cursor:pointer;
+}
+.btn:hover{
+	color:white!important;
+}
+ul,ol{
+list-style: none;
+}
+span{
+color:black;
+width:5%;
+}
+samp{
+	color:#eee;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+}
+form img{
+	width: 100%;
+	margin: 2% 30%;
+}
+#login{
+	min-height:350px;
+	padding: 20px 30px 20px 30px;
+	box-shadow: -1px -1px 1px 1px #eee;
+	}	
+
+/****************************
+*** call back form text ****
+****************************/
+	#b-clr{
+	background-color:rgb(246,247,245);	
+	}
+	#b-clr #secclr{
+	color:green;	
+	}
+	#b-clr #oneclr{
+	color:#0d50bc;	
+	}
+	.btm-bar{
+		padding-bottom:150px;
+	}	
+/***********************
+********* Footer ******
+************************/
+#foot {
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  clear: both;
+  overflow: hidden;
+  color:green;
+  background:white;
+  font-size:16px;
+  font-weight:bold;
+  border-top:.2px solid gray;
+}
+#foot a {
+  color:black;
+}
+#foot ul > li {
+  display: inline-block;
+  margin-left: 15px;
+}
+/****************************
+*    jumbotron              *
+*****************************/
+.jumbotron{
+	background-color:rgb(236,238,234);
+	border-bottom:.5px solid rgb(198,199,197);	
+}
+.jumbotron p{
+	color:black;
+	font-size:14px;
+}
+.jumbo{
+width:100%;
+ height:auto;
+ padding-bottom:15px;
+ padding-left:5%;
+}
+.jumbo img{
+padding:13% 13% 13% 13%;
+ width:100%; 
+ height:auto;
+ float:right;	
+}
+
+/****************************
+*    About Page             *
+*****************************/
+.about{
+	font-size:45px;
+	color:white;
+	padding-bottom:15px;
+	padding-top:15px;
+	text-align:center;
+}
+#about{
+	padding-top:30px;
+}
+.findout{
+margin-top:10px;
+width:100%;
+height:auto;
+background-repeat:no-repeat;
+background-size: 100% 100%;
+padding-top:10px;
+padding-bottom:20px;
+color:white;
+}
+.findout h3{
+	color:white;
+}
+.findout img{
+padding-top:20px;
+width:290px;
+height:300px;
+}
+
+/****************************
+*      Capabilities         *
+*****************************/
+.flex-container{
+	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+.flex-container1{
+	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+	padding-left:10px;
+	justify-content:justify;
+}
+.flex-container > div{
+margin:5px;
+text-align:center;
+}
+.div-col-img{
+margin-bottom:10px;	
+margin-top:10px;
+width:240px;
+height:250px;
+background-repeat:no-repeat;
+background-size: 100% 100%;
+border:1px solid rgb(198,199,197);
+}
+.div-col-img:hover{
+	border:1px solid #eee;
+}
+.div-col-img div{
+	background-color:white;
+	margin-bottom:30px;
+	margin-top:190px;
+	width:130px;
+	height:40px;
+	border-radius:25px;
+	font-size:12px;
+	font-weight:bold;
+	color:black;
+}
+.div-col-img div:hover{
+	background-color:rgb(26,207,77);
+}
+/**************************
+*       Service Bar         *
+*****************************/
+.srvc-bar{
+	background-color:rgb(217,221,223);
+	width:100%;
+	height:auto;
+	margin:0px;
+}
+.srvc-bar p{
+	font-size:15px;
+}
+.srvc-bar img{
+	margin-top:10px;
+	margin-bottom:10px;
+	border-radius:30%;
+	width:65px;
+	height:65px;
+}
+.srvc-bar .colum{
+	border-right:1px solid white;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+.srvc-bar .colum p{
+	margin:0px;
+	padding:0px;
+}
+/****************************
+*      Image Slider         *
+*****************************/
+ .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 40%;
+        z-index: -1;
+}
+ .carousel-inner img {
+    width:100%;
+	min-height:400px;
+	max-height: 400px;
+	padding-top:10px;
+  }
+  .carousel-caption h2,h3,p{
+	  color:black;
+	  margin-left:10px;
+	  text-align: justify;
+  }
+.bok{
+	margin-top:5px;
+	background-color:rgb(217,221,223);
+	border-radius:10px;
+	text-align:center;
+	justify-content:center;
+}
+.bok .hed{
+	background-color:rgb(181,181,182);
+	border-radius:15px;
+}
+.bok input[type=text],[type=email], .btn{
+	font-size:11px;
+	}
+.navbar{
+	margin-bottom:0px !important;
+	border:none !important;
+	height:100%;
+	font-size:16px;
+	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:10px;
+	background:white;
+}
+
+.navbar span{
+border:none !important;	
+}
+
+/*******************************************
+******        Profile Page           *******
+*******************************************/
+.first_section-profile{
+	margin-top:20px;
+	padding-top:20px;
+}
+.first_section{
+	background-color:white;
+	width:90%;
+	height:100%;
+	color:black;
+	padding:20px;
+	line-height:2rem;
+	border:1px solid;
+	border-color:rgb(198,199,197);
+	font-size:15px;
+}
+.first_section p{
+	font-size:17px;
+}
+.first_section img{
+	width:35%;
+	margin-left:30%;
+	border-radius:50%;
+}
+.first_section .badge{
+	background-color:white;
+	color:green !important;
+	border:0.5px solid green;
+	margin:10px;
+	width:50px;
+}
+.first_section .btn-block{
+	padding:2%;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.first_section .User-name{
+	font-size:20px;
+	font-weight:bold;
+}
+.first_section .card-footer{
+	background-color:rgb(246,248,249);
+	padding:5%;
+	padding-left:0px;
+	height:25%;
+}
+/***************************
+***     Second Section   ***
+***************************/
+.second_section{
+	width:100%;
+	height:100%;
+	margin-top:20px;
+	padding-top:20px;
+	line-height:2rem;
+}
+.second_section .card{
+	width:100%;
+	height:200px;
+	margin-top:0.1%;
+	margin-bottom:0.1%;
+}
+.second_section .card-footer p{
+	color:green;
+}
+.second_section .card-body a:hover{
+	color:rgb(26,207,77);
+	text-decoration:underline !important;
+}
+#child{
+	width:200px;
+	height:230px;
+	background-color:white;
+	color:black;
+	margin-left:1%;
+	margin-right:1%;
+	margin-bottom:1%;
+	padding:2%;
+}
+#child p{
+	margin-top:3%;
+	margin-bottom:3%;
+}
+#child img{
+	width:165px;
+	height:120px;
+}
+#child .card-body span{
+	color:gold;
+	padding-right:30px;
+}
+.new-gig{
+	background-color:powderblue;
+	text-align:center;
+	padding:20px;
+	padding-left:30px;
+	padding-right:30px;
+	margin:10px;
+	margin-left:45px;
+	width:30px;
+	border-radius:50%;
+}
+
+/****************************
+**  side bar Profile page ***
+*****************************/
+.onechild{
+	background-color:white;
+	width:90%;
+	height:100%;
+	color:black;
+	margin-top:2%;
+	padding:20px;
+	line-height:3rem;
+	border:0.2px solid rgb(198,199,197);	
+}
+.onechild .card-body button{
+	margin-bottom:15px;
+	margin-top:15px;
+}
+.onechild input[type=text], input[type=password] {
+    width: 100%;
+    padding: 2% 4%;
+    margin: 5% 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.onechild form{
+	background-color:rgb(246,247,245);
+	padding:20px;
+}
+#accordion{
+	padding-bottom:20px;
+	padding-top:20px;
+}	
+.onechild #add_language, #link_data,
+ #skill,#education_data,#certification_data{
+	padding-bottom:20px;
+	padding-top:20px;
+	border-top:1px solid #eee;
+}
+.profile-btn{
+	padding: 3% 4%;
+    margin: 4% 4%;
+    border: none;
+    width: 42%;
+}
+/************************
+** Main-Page Side bar  **
+************************/
+.mainpage-side-bar{
+	margin-top:40px;
+	padding-top:20px;	
+	background-color:white;
+	max-width:270px;
+}
+.main-rslt{
+	font-size:15px;
+	width:100%;
+	height:100%;
+	color:rgb(52,56,58);
+	padding:10px;
+	line-height:3rem;
+	border-bottom:1px solid #eee;	
+}
+.mainpage-side-bar form{
+	background-color:white;
+	line-height:2rem;
+}
+
+/*****************************************
+******    On Off toggle Button     *******
+*****************************************/
+
+.card-footer .vacation_mode{
+	position:relative;
+	transform:translate(-50%,-50%);
+	width:50px;
+	height:25px;
+	border-radius:25px;
+	background:linear-gradient(0deg,#d8d8d8,#cccccc);
+	border-top:0.02em solid #ececec;
+	border-bottom:0.02em solid #ececec;
+}
+.card-footer .vacation_mode .inner{
+	position:absolute;
+	top:5px;
+	left:5px;
+	right:5px;
+	bottom:5px;
+	background:linear-gradient(0deg,#a5a5a5,#717171);
+	border-radius:20px;
+	box-shadow:inset 0 0 15px rgba(0,0,0,0.5);
+}
+.card-footer .vacation_mode .inner .toggle{
+	position:absolute;
+	top:-3px;
+	left:-1px;
+	width:18px;
+	height:18px;
+	border-radius:50%;
+	background:linear-gradient(0deg,#eee,#e4e4e4);
+	box-shadow:0 4px 6px rgba(0,0,0,0.2);
+	box-sizing:border-box;
+	border-top:0.04em solid #ececec;
+	border-bottom:0.01em solid #ececec;
+	transition:0.5s;
+}
+.card-footer .vacation_mode .inner .toggle:before{
+	content:'OFF';
+	position:absolute;
+	top:2px;
+	left:2px;
+	right:2px;
+	bottom:2px;
+	background:linear-gradient(0deg,#e4e4e4,#ccc);
+	border-radius:50%;
+	text-align:center;
+	font-size:5px;
+	font-weight:bold;
+	line-height:15px;
+	color:#a9a9a9;
+}
+.card-footer .vacation_mode .inner.active .toggle:before{
+	content:'ON';
+	color:#00d22d;
+	font-weight:bold;
+}
+.card-footer .vacation_mode .inner.active .toggle{
+	left:23px;
+}
+.card-footer .vacation_mode .inner.active{
+background:linear-gradient(0deg,#00d22d,#158a00);	
+}
+/*****************************************
+******    accept gig toggle Button  *******
+*****************************************/
+.aceptGig input[type="checkbox"]{
+	position:relative;
+	margin-right:20px;
+	width:40px;
+	height:20px;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	background:#c6c6c6;
+	outline:none;
+	border-radius:20px;
+	box-shadow:inset 0 0 5px rgba(0,0,0,0.2);
+	
+}
+.aceptGig input:checked[type="checkbox"]{
+	background:rgb(30,188,27); 
+}
+.aceptGig input[type="checkbox"]:before{
+	content:'';
+	position:absolute;
+	width:20px;
+	height:20px;
+	border-radius:20px;
+	top:0;
+	left:0;
+	background:#fff;
+	transform:scale(1.1);
+	box-shadow:0 2px 5px rgba(0,0,0,0.2);
+	transition:0.5s;
+}
+.aceptGig input:checked[type="checkbox"]:before{
+	left:20px;
+}
+
+/************************************
+*****    Pop up login Form     ******
+************************************/
+#linkforget{
+	text-align:left;
+	display:block;
+	margin-top:2px;
+	margin-bottom:2px;
+	color:rgb(26,207,77);
+}
+#linkforget:hover{
+	text-decoration:underline !important;
+}
+.checkbox{
+	text-align:left;
+	margin:0px;
+}
+.modal-content{
+max-width:300px;
+margin:auto;
+}
+.modal .modal-body{
+	background-color:rgb(217,221,223);
+}
+.modal .modal-footer{
+	background:rgb(181,181,182);
+	margin-top:2px;
+}
+.modal-footer a{
+	color:rgb(26,207,77);
+}
+.modal-footer a:hover{	
+	text-decoration:underline !important;
+}
+ .or-seperator {
+        margin: 20px 0 10px;
+        text-align: center;
+        border-top: 1px solid gray;
+    }
+ .or-seperator i {
+        padding: 0 10px;
+        background: rgb(217,221,223);
+        position: relative;
+        top: -11px;
+        z-index: 1;
+		font-size:22px;
+    }
+ .social-btn .btn {
+        margin: 10px 0;
+        font-size: 15px;
+        text-align: left; 
+        line-height: 24px;       
+    }
+ .social-btn .btn i {
+		float: left;
+		margin: 4px 15px  0 5px;
+        min-width: 15px;
+	}
+.modal input[type=text],input[type=password],input[type=tel]{
+	margin:0px;
+}
+
+	
+/********************************
+***** User profile Nav Bar  *****
+********************************/
+ .form-inline {
+        display: inline-block;
+    }	
+	.nav-link img {
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		margin: -8px 0;
+		float: left;
+		margin-right: 5px;
+	}
+	.navbar .dropdown-item i {
+		font-size: 15px;
+		min-width: 22px;
+	}
+	.navbar .nav-item.open > a {
+		background: none !important;
+	}
+	.input-group {
+		width: 100%;
+		}
+
+/**************************
+***  Gig Page list view ***
+**************************/
+.listContain{
+	margin-top:15px;
+	padding:0;
+	border:.5px solid #eee;
+	background-color:white;
+}
+#listGigHead{
+	width:100%;
+	height:60px;
+	padding-left:10px;
+	border-bottom:.5px solid rgb(198,199,197);
+}
+#listGigBody{
+	width:100%;
+	padding-left:5px;
+	border-bottom:.5px solid #eee;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+#listGigBody p{
+	font-size:15px;
+	color:rgb(170,174,170);
+}
+#listGigFoter{
+	width:100%;
+	padding-left:5px;
+	border-bottom:.5px solid #eee;
+	padding-top:15px;
+	padding-bottom:5px;
+}
+#listGigFoter:hover{
+	background:rgb(222,249,229);
+}
+#listGigFoter p{
+	font-size:15px;
+}
+#listGigFoter span{
+	color:green;
+}
+#listGigFoter samp{
+color:black;
+}
+#listGigFoter a{
+	color:black;
+}
+
+/**************************
+***  Manage Page Style  ***
+**************************/
+.post-req, .creatGig{
+	width:65%;
+	background-color:white;
+	margin:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+	padding:0;
+	border:.5px solid rgb(176,180,182);	
+}
+.post-req span{
+	color:rgb(99,188,230);
+	border:none;
+	width:30px !important;
+	font-size:25px;
+}
+.post-req p{
+	font-size:17px;
+}
+.describe-service{
+	padding:5%;
+	border-bottom:.5px solid rgb(176,180,182);
+}
+.describe-service textarea{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:100px;;
+}
+.chose-category{
+	padding:5%;
+	border-bottom:.5px solid rgb(176,180,182);
+}
+#category{	
+	margin:5px;
+}
+.chose-time{
+	padding:5%;
+	border-bottom:.5px solid rgb(176,180,182);		
+}
+.chose-time button{
+	background:none;
+	margin-right:15px;
+	width:130px;
+	height:40px;
+	border:.5px solid rgb(176,180,182);
+	border-radius:5%;
+}
+.chose-time button:hover{
+	background:green;
+	color:white!important;
+}
+.chose-time input[type="tel"]{
+	background:none;
+	margin-right:15px;
+	width:130px;
+	height:40px;
+	border:.5px solid rgb(176,180,182);
+	border-radius:5%;
+}
+.chose-budget{
+	padding:5%;
+}
+.chose-budget a{
+	margin:10px;
+	margin-left:55%;
+	width:15%;
+	background-color:green;
+}
+.chose-budget a:hover{
+	color:white!important;
+}
+
+/**************************
+***Create Gig Page Style***
+**************************/
+.newgig a.btn{
+	margin-top:20px;
+	border-radius:0px;
+	margin-bottom:20px;
+}
+.newgig{
+	width:65%;
+	margin:auto;
+	margin-top:30px;
+}
+.newgig textarea{
+	width:100%;
+}
+#packg{
+	margin-top:40px;
+	margin-bottom:40px;
+	border:0.2px solid rgb(198,199,197);
+}
+#packg table thead{
+	background-color:rgb(246,247,245);
+	border:0.2px solid rgb(198,199,197);
+	font-size:16px;
+}
+#packg table tr td[rowspan]{
+	background-color:rgb(246,247,245);
+	border:0.2px solid rgb(198,199,197);
+}
+#packg table tr td{
+	border-right:0.2px solid rgb(198,199,197);
+}
+#packg form{
+	background-color:rgb(246,247,245);
+	padding:10px;
+	width:100%;	
+	border:0.2px solid rgb(198,199,197);
+}
+.gigTitle{
+		padding:5%;
+}
+.gigTitle input[type=text]{
+	width:100%;
+	height:100px;
+	margin-bottom:40px;
+}
+.gigTitle input[type=search]{
+	width:100%;
+	height:40px;
+	margin-bottom:30px;
+	margin-top:10px;
+}
+#topbar{
+	background:white;
+	border-top:0.2px solid rgb(198,199,197);
+	border-bottom:0.2px solid rgb(198,199,197);
+}
+.tab-pane h3{
+	padding-bottom:20px;
+	margin-bottom:20px;
+	border-bottom:0.2px solid rgb(198,199,197);
+}
+.ovrview, .price-pkg, .tellRequirement{
+	background-color:white;
+}
+#extraFastDlvry, #aditionReision{
+	border-bottom:0.2px solid rgb(198,199,197);
+}
+.tellRequirement{
+	padding:20px;
+}
+.tellRequirement div{
+	margin:25px;
+	padding:20px;
+	background-color:rgb(246,247,245);
+}
+
+/**************************
+***Setting Page Style***
+**************************/
+.acount-seting, .security-seting, .notification{
+	padding:20px;
+	margin:auto;
+	margin-bottom:20px;
+	margin-top:20px;
+	background-color:white;
+	border-bottom:1px solid rgb(198,199,197);
+}
+.deactive-acount,.realTimeNotic{
+	padding:20px;
+	margin:auto;
+	margin-bottom:20px;
+	background-color:white;
+	font-size:12px;
+}
+.security-seting input[type=password]{
+	padding:auto;
+	margin:auto;
+}
+.new-gig .btn{
+	margin:3px;
+	font-size:12px;
+}
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media screen and (min-width:200px) and (max-width:401px)
+{
+.col-lg-01,.col-md-01,.col-sm-01,.col-xs-01{width:8.33%}
+.col-lg-02,.col-md-02,.col-sm-02,.col-xs-02{width:16.66%}
+.col-lg-03,.col-md-03,.col-sm-03,.col-xs-03{width:24.99%}
+.col-lg-04,.col-md-04,.col-sm-04,.col-xs-04{width:33.33%}
+.col-lg-05,.col-md-05,.col-sm-05,.col-xs-05{width:41.66%}
+.col-lg-06,.col-md-06,.col-sm-06,.col-xs-06{width:49.99%}
+.col-lg-07,.col-md-07,.col-sm-07,.col-xs-07{width:58.33%}
+.col-lg-08,.col-md-08,.col-sm-08,.col-xs-08{width:66.66%}
+.col-lg-09,.col-md-09,.col-sm-09,.col-xs-09{width:74.99%}
+.col-lg-010,.col-md-010,.col-sm-010,.col-xs-010{width:83.33%}
+.col-lg-011,.col-md-011,.col-sm-011,.col-xs-011{width:91.66%}
+.col-lg-012,.col-md-012,.col-sm-012,.col-xs-012{width:99.999%}
+h1{font-size:18px}
+h2{font-size:16px}
+h3{font-size:15px}
+h4{font-size:12.5px}
+h5{font-size:11.5px}
+h6{font-size:8.5px}
+p{font-size:7px}
+a{font-size:8px!important;}
+span{width:1.7%;}
+#foot{padding-top:10px;padding-bottom:10px;font-size:11px;border-top:.1px solid gray;}
+#foot ul>li{margin-left:10px}
+.jumbotron p,a{font-size:8px}
+.jumbo{padding-bottom:10px; padding-left:2%;}
+.jumbo img{width:80%; padding:7% 7% 7% 7%; display:none;}
+.about{font-size:28px; padding-bottom:8px; padding-top:8px;}
+#about{padding-top:15px;}
+.findout{margin-top:10px; padding-top:10px;padding-bottom:20px;}
+.findout img{padding-top:14px;width:110px;height:120px;margin:5%;}
+.div-col-img{margin-bottom:5px; margin-top:5px;width:150px; height:160px;}
+.div-col-img div{margin-bottom:10px;margin-top:120px;width:85px;height:25px;font-size:7.5px;}
+.srvc-bar p{font-size:7px;}
+.srvc-bar img{margin-top:5px;margin-bottom:5px; width:37px;height:37px;}
+.srvc-bar .colum{margin-top:8px;margin-bottom:8px;}
+.carousel-inner{height:30%;}
+.carousel-inner img{min-height:280px;max-height:280px;}
+.carousel-caption h2,h3,p{ margin-left:5px;}
+.bok{margin-top:3px;}
+.bok .btn{font-size:10px;}
+.navbar{font-size:11px;padding-top:5px; padding-bottom:7px;}
+.first_section-profile{margin-top:10px;padding:10px;}
+.first_section{width:95%; padding:8px;line-height:1rem;font-size:8px;}
+.first_section p{font-size:6.5px;}
+.first_section img{width:20%;margin-left:35%;}
+.first_section-profile span{padding-right:8px; font-size:6px;}
+.first_section .badge{margin:4px;width:30px;}
+.first_section .btn-block{font-size:8px;padding:1%;margin-top:3px; margin-bottom:3px;}
+.first_section .User-name{font-size:8px;}
+.first_section .card-footer{padding:3%; padding-left:0px;height:13%;}
+.second_section{width:100%;margin-top:10px;padding-top:8px;line-height:1rem;}
+.second_section .card{width:100%;height:140px;}
+.second_section .card-footer{margin-top:5px;}
+#child{width:120px;height:140px;padding:3px;margin:3px;}
+#child p,a{font-size:7px!important}
+#child img{height:70px;width:114px}
+#child span{font-size:10px; padding-left:3px;padding-right:3px;}
+#child .card-body span{padding-right:16px;}
+.new-gig{margin:auto;padding-left:20px;margin-top:20px}
+.onechild{width:95%;margin-top:1%;padding:10px;line-height:1.5rem;}
+.onechild .card-body button{font-size:10px;margin-bottom:5px;margin-top:5px;}
+.onechild input[type=text], input[type=password] {padding:1% 2%;margin:3% 0;}
+.onechild form{padding:10px;}
+.onechild textarea,#exp_level,#eduCountry,#degreeTitle,#degreeYear,#award_year,#lang_level,input[type=text],input[type=password],input[type=tel]{font-size:8px;}
+#accordion{padding-bottom:10px;paddig-top:10px;}
+.onechild #add_language,#link_data,#skill,#education_data,#certification_data{padding-bottom:7px;padding-top:7px;}
+.profile-btn{padding:1.5% 2%;margin: 2% 2%;width:44%;}
+.mainpage-side-bar{margin-top:5px;padding-top:5px;width:100%;}
+.main-rslt{font-size:7px;line-height:1.5rem;padding:3px;width:100%;height:100%;}
+.mainpage-side-bar form{line-height:1.2rem;}
+.mainpage-side-bar samp{font-size:7px;}
+.card-footer .vacation_mode{width:25px;height:13px;border-radius:26px;}
+.card-footer .vacation_mode .inner{top:3px;left:3px;right:3px;bottom:3px;border-radius:20px;}
+.card-footer .vacation_mode .inner .toggle{top:-1.5px;left:-.5px;width:10px;height:10px;}
+.card-footer .vacation_mode .inner .toggle:before{top:1px;left:1px;right:1px;bottom:1px;font-size:3px;line-height:9px;}
+.card-footer .vacation_mode .inner.active .toggle{left:10px;} 
+.aceptGig input[type="checkbox"]{margin-right:10px;width:20px;height:10px;border-radius:15px;}
+.aceptGig input[type="checkbox"]:before{width:10px;height:10px;}
+.aceptGig input:checked[type="checkbox"]:before{left:10px;}
+.nav-link img{width:25px;height:25px;margin:-5px 0;margin-left:10px;}
+.navbar .dropdown-item i{font-size:9px;min-width:18px;}
+.listContain{margin-top:10px;font-size:4px}
+#listGigHead{height:40px;padding-left:3px;}
+#listGigBody{padding-left:1.5px;padding-top:3.5px;padding-bottom:1.5px;}
+#listGigBody p{font-size:4px;}
+#listGigFoter{padding:1.5px;padding-top:8px;padding-bottom:1.5px;}
+#listGigFoter p,samp,a{font-size:8px;}
+#listGigFoter .btn{font-size:6px;width:5px; display:none;}
+.post-req,.creatGig{width:100%!important;margin-top:12px !important;margin-bottom:12px!important;}
+.post-req p{font-size:7px !important;}
+.describe-service{padding:3%!important;}
+.describe-service textarea{width:100%!important;height:55px !important;}
+.describe-service input[type="file"]{width:62px !important;font-size:8.8px!important;}
+.chose-category{padding:2%!important;}
+.chose-category #category{font-size:9px!important;margin:1px!important;}
+#category{font-size:10px !important;margin:2px!important;}
+.chose-time{padding:2% !important;}
+.chose-time button{font-size:9px;margin-right:6px!important;margin-top:4px;margin-bottom:4px;width:55px !important; height:20px!important; float:left !important;}
+.chose-time input[type="tel"]{font-size:9px;margin-right:6px!important;margin-top:4px;margin-bottom:4px;width:55px !important; height:20px!important;}
+.chose-budget{padding:2.5%!important;}
+.chose-budget a{margin:5px!important; margin-left:70%!important;width:25% !important;}
+.nav-tabs .btn{font-size:7px;}
+.newgig a.btn{margin-top:10px;width:80px;font-size:7px!important;}
+.newgig{width:100%;margin-top:20px!important;margin:auto;}
+.newgig textarea{height:30%;}
+#packg{margin-top:20px;margin-bottom:20px;}
+#packg table thead{font-size:7px}
+#packg table tbody{font-size:6px}
+#packg table #catgry{font-size:6px}
+#packg form{padding:5px;width:95%;}
+.gigTitle{padding:2.5%;}
+.gigTitle input[type=text]{height:50px;margin-bottom:20px;}
+.gigTitle input[type=search]{height:25px;margin-bottom:15px;margin-top:10px;}
+.tab-pane h3{padding-bottom:10px;margin-bottom:10px;}
+.tellRequirement{padding:8px}
+.tellRequirement div{margin:5px;padding:5px}
+.acount-seting, .security-seting, .notification{padding:10px;margin:auto;margin-bottom:10px;margin-top:10px;}
+.deactive-acount{padding:10px;margin:auto;margin-bottom:10px;font-size:8px;}
+.new-gig .btn{margin:1.5px;font-size:8px;}
+
+}
+
+
+@media screen and (min-width:402px) and (max-width:509px)
+{
+h1{font-size:20px}
+h2{font-size:18px}
+h3{font-size:16px}
+h4{font-size:14px}
+h5{font-size:12px}
+h6{font-size:10px}
+p{font-size:8px}
+a{font-size:9px!important;}
+span{width:2%;}
+#foot{padding-top:10px;padding-bottom:10px;font-size:11px;border-top:.1px solid gray;}
+#foot ul>li{margin-left:10px}
+.jumbotron p,a{font-size:9px}
+.jumbo{padding-bottom:10px; padding-left:2%;}
+.jumbo img{width:80%; padding:7% 7% 7% 7%; display:none;}
+.about{font-size:28px; padding-bottom:8px; padding-top:8px;}
+#about{padding-top:15px;}
+.findout{margin-top:10px; padding-top:10px;padding-bottom:20px;}
+.findout img{padding-top:14px;width:110px;height:120px;margin:5%;}
+.div-col-img{margin-bottom:5px; margin-top:5px;width:150px; height:160px;}
+.div-col-img div{margin-bottom:10px;margin-top:120px;width:85px;height:25px;font-size:8px;}
+.srvc-bar p{font-size:9px;}
+.srvc-bar img{margin-top:5px;margin-bottom:5px; width:45px;height:45px;}
+.srvc-bar .colum{margin-top:8px;margin-bottom:8px;}
+.carousel-inner{height:30%;}
+.carousel-inner img{min-height:280px;max-height:280px;}
+.carousel-caption h2,h3,p{ margin-left:5px;}
+.bok{margin-top:3px;}
+.navbar{font-size:11px;padding-top:5px; padding-bottom:7px;}
+.first_section-profile{margin-top:15px;padding:10px;}
+.first_section{width:100%; padding:8px;line-height:1rem;font-size:8px;}
+.first_section p{font-size:9px;}
+.first_section img{width:20%;margin-left:35%;}
+.first_section-profile span{padding-right:10px; font-size:8px;}
+.first_section .badge{margin:5px;width:35px;}
+.first_section .btn-block{font-size:10px;padding:1%;margin-top:3px; margin-bottom:3px;}
+.first_section .User-name{font-size:11px;}
+.first_section .card-footer{padding:3%; padding-left:0px;height:13%;}
+.second_section{margin-top:10px;padding-top:10px;line-height:1rem;}
+.second_section .card{width:100%;height:140px;}
+.second_section .card-footer{margin-top:5px;}
+#child{width:110px;height:135px;padding:3px;margin:5px;}
+#child p,a{font-size:9px!important}
+#child img{height:70px;width:103px}
+#child span{font-size:11px; padding-left:3px;padding-right:3px;}
+#child .card-body span{padding-right:16px;}
+.new-gig{margin:auto;padding-left:20px;margin-top:20px}
+.onechild{width:100%;margin-top:1%;padding:10px;line-height:1.5rem;}
+.onechild .card-body button{margin-bottom:7px;margin-top:7px;}
+.onechild input[type=text], input[type=password] {padding:1% 2%;margin:3% 0;}
+.onechild form{padding:10px;}
+.onechild textarea,#exp_level,#eduCountry,#degreeTitle,#degreeYear,#award_year,#lang_level,input[type=text],input[type=password],input[type=tel]{font-size:9px;}
+#accordion{padding-bottom:10px;paddig-top:10px;}
+.onechild #add_language,#link_data,#skill,#education_data,#certification_data{padding-bottom:10px;padding-top:10px;}
+.profile-btn{padding:1.5% 2%;margin: 2% 2%;width:20%;}
+.mainpage-side-bar{margin-top:22px;padding-top:10px;max-width:190px;}
+.main-rslt{font-size:8px;line-height:1.7rem;padding:3px;width:100%;height:100%;}
+.mainpage-side-bar form{line-height:1.2rem;}
+.mainpage-side-bar samp{font-size:8px;}
+.card-footer .vacation_mode{width:25px;height:13px;border-radius:26px;}
+.card-footer .vacation_mode .inner{top:3px;left:3px;right:3px;bottom:3px;border-radius:20px;}
+.card-footer .vacation_mode .inner .toggle{top:-1.5px;left:-.5px;width:10px;height:10px;}
+.card-footer .vacation_mode .inner .toggle:before{top:1px;left:1px;right:1px;bottom:1px;font-size:3px;line-height:9px;}
+.card-footer .vacation_mode .inner.active .toggle{left:10px;} 
+.aceptGig input[type="checkbox"]{margin-right:10px;width:20px;height:10px;border-radius:15px;}
+.aceptGig input[type="checkbox"]:before{width:10px;height:10px;}
+.aceptGig input:checked[type="checkbox"]:before{left:10px;}
+.nav-link img{width:25px;height:25px;margin:-5px 0;margin-left:10px;}
+.navbar .dropdown-item i{font-size:9px;min-width:18px;}
+.listContain{margin-top:10px;}
+#listGigHead{height:40px;padding-left:3px;}
+#listGigBody{padding-left:1.5px;padding-top:1.5px;padding-bottom:1.5px;}
+#listGigBody p{font-size:6px;}
+#listGigFoter{padding:1.5px;padding-top:8px;padding-bottom:1.5px;}
+#listGigFoter p,a,samp{font-size:10px;}
+#listGigFoter .btn{font-size:6px;width:5px; display:none;}
+.post-req,.creatGig{width:100%!important;margin-top:12px !important;margin-bottom:12px!important;}
+.post-req p{font-size:9px !important;}
+.describe-service{padding:3%!important;}
+.describe-service textarea{width:100%!important;height:55px !important;}
+.describe-service input[type="file"]{width:62px !important;font-size:8.8px!important;}
+.chose-category{padding:3%!important;}
+.chose-category #category{font-size:11px!important;margin:1px!important;}
+#category{font-size:12px !important;margin:2px!important;}
+.chose-time{padding:2% !important;}
+.chose-time button{font-size:11px;margin-right:6px!important;margin-top:4px;margin-bottom:4px;width:65px !important; height:25px!important; float:left !important;}
+.chose-time input[type="tel"]{font-size:11px;margin-right:6px!important;margin-top:4px;margin-bottom:4px;width:65px !important; height:25px!important;}
+.chose-budget{padding:2.5%!important;}
+.chose-budget a{margin:5px!important; margin-left:70%!important;width:25% !important;}
+.nav-tabs .btn{font-size:9px;}
+.newgig a.btn{margin-top:10px;width:100px;font-size:9px!important;}
+.newgig{width:95%;margin-top:20px!important;margin:auto;}
+.newgig textarea{height:30%;}
+#packg{margin-top:20px;margin-bottom:20px;}
+#packg table thead{font-size:9px}
+#packg table tbody{font-size:8px}
+#packg table #catgry{font-size:8px}
+#packg form{padding:5px;width:95%;}
+.gigTitle{padding:2.5%;}
+.gigTitle input[type=text]{height:50px;margin-bottom:20px;}
+.gigTitle input[type=search]{height:25px;margin-bottom:15px;margin-top:10px;}
+.tab-pane h3{padding-bottom:10px;margin-bottom:10px;}
+.tellRequirement{padding:8px}
+.tellRequirement div{margin:5px;padding:5px}
+.acount-seting, .security-seting, .notification{padding:12px;margin:auto;margin-bottom:12px;margin-top:12px;}
+.deactive-acount{padding:12px;margin:auto;margin-bottom:12px;font-size:8px;}
+.new-gig .btn{margin:1.5px;font-size:8px;}
+
+}
+
+
+@media screen and (min-width:510px) and (max-width:767px)
+{
+h1{font-size:23px}
+h2{font-size:20px}
+h3{font-size:18px}
+h4{font-size:16px}
+h5{font-size:14px}
+h6{font-size:12px}
+p{font-size:10px}
+a{font-size:10px!important;}
+span{width:3.5%}
+#foot{padding-top:15px;padding-bottom:15px;font-size:13px;border-top:.15px solid gray;}
+#foot ul>li{margin-left:12px}
+.jumbotron p,a{font-size:11px}
+.jumbo{padding-bottom:12px; padding-left:2%;}
+.jumbo img{width:80%; padding:7% 7% 7% 7%; display:none;}
+.about{font-size:35px; padding-bottom:10px; padding-top:10px;}
+#about{padding-top:20px;}
+.findout{margin-top:10px; padding-top:13px;padding-bottom:20px;}
+.findout img{padding-top:15px;width:120px;height:130px;margin:4%;}
+.div-col-img{margin-bottom:7px; margin-top:7px;width:170px; height:185px;}
+.div-col-img div{margin-bottom:10px;margin-top:140px;width:100px;height:30px;font-size:10px;}
+.srvc-bar p{font-size:11px;}
+.srvc-bar img{margin-top:5px;margin-bottom:5px; width:55px;height:55px;}
+.srvc-bar .colum{margin-top:10px;margin-bottom:10px;}
+.carousel-inner{height:30%;}
+.carousel-inner img{min-height:310px;max-height:310px;}
+.carousel-caption h2,h3,p{ margin-left:7px;}
+.bok{margin-top:5px;}
+.bok input[type=text],[type=email], .btn{font-size:12px;}
+.navbar{font-size:13px;padding-top:5px; padding-bottom:7px;}
+.first_section-profile{margin-top:12px;padding:12px;}
+.first_section{width:90%; padding:8px;line-height:1.5rem;font-size:10px;}
+.first_section p{font-size:12px;}
+.first_section img{width:20%;margin-left:40%;}
+.first_section-profile span{padding-right:10px; font-size:10px;}
+.first_section .badge{margin:5px;width:45px;}
+.first_section .btn-block{padding:1.5%;margin-top:5px; margin-bottom:5px;}
+.first_section .User-name{font-size:13px;}
+.first_section .card-footer{padding:3%; padding-left:0px;height:13%;}
+.second_section{margin-top:7px;padding-top:13px;}
+.second_section .card{width:100%;height:150px;}
+#child{width:160px;height:170px;padding:5px;margin:5px;}
+#child p,a{font-size:11px!important;line-height:.1rem;}
+#child img{width:150px;height:85px;}
+#child span{font-size:12px; padding-left:5px;padding-right:5px;}
+#child .card-body span{padding-right:18px;}
+.new-gig{padding-left:25px;margin:auto;margin-top:25px;}
+.onechild{margin-top:1%;padding:10px;line-height:1.5rem;}
+.onechild .card-body button{margin-bottom:7px;margin-top:7px;}
+.onechild input[type=text], input[type=password] {padding:1% 2%;margin:3% 0;}
+.onechild form{padding:11px;}
+.onechild textarea,#exp_level,#eduCountry,#degreeTitle,#degreeYear,#award_year,#lang_level,input[type=text],input[type=password],input[type=tel]{font-size:11px;}
+#accordion{padding-bottom:13px;paddig-top:13px;}
+.onechild #add_language,#link_data,#skill,#education_data,#certification_data{padding-bottom:13px;paddig-top:13px;}
+.profile-btn{padding:1.5% 2%;margin: 2% 2%;width:25%;}
+.mainpage-side-bar{margin-top:22px;padding-top:12px;max-width:250px;}
+.main-rslt{font-size:10px;line-height:1.5rem;padding:2px;width:100%;height:100%;}
+.mainpage-side-bar form{line-height:1.2rem;}
+.mainpage-side-bar samp{font-size:10px;}
+.card-footer .vacation_mode{width:30px;height:18px;border-radius:30px;}
+.card-footer .vacation_mode .inner{top:4px;left:4px;right:4px;bottom:4px;border-radius:20px;}
+.card-footer .vacation_mode .inner .toggle{top:-2px;left:-1px;width:12px;height:12px;}
+.card-footer .vacation_mode .inner .toggle:before{top:2px;left:2px;right:2px;bottom:2px;font-size:4px;line-height:11px;}
+.card-footer .vacation_mode .inner.active .toggle{left:13px;} 
+.aceptGig input[type="checkbox"]{margin-right:13px;width:25px;height:14px;border-radius:18px;}
+.aceptGig input[type="checkbox"]:before{width:14px;height:14px;}
+.aceptGig input:checked[type="checkbox"]:before{left:14px;}
+.nav-link img{width:30px;height:30px;margin:-6px 0;margin-left:15px;}
+.navbar .dropdown-item i{font-size:11px;min-width:18px;}
+.listContain{margin-top:10px;}
+#listGigHead{height:50px;padding-left:5px;}
+#listGigBody{padding-left:2px;padding-top:3px;padding-bottom:3px;}
+#listGigBody p{font-size:9px;}
+#listGigFoter{padding:3px;padding-top:10px;padding-bottom:3px;}
+#listGigFoter p,a,samp,span{font-size:12px;}
+#listGigFoter .btn{font-size:7px;width:10px;}
+.post-req,.creatGig{width:80%!important;margin-top:15px !important;margin-bottom:15px!important;}
+.post-req p{font-size:11px !important;}
+.describe-service{padding:3%!important;}
+.describe-service textarea{width:100%!important;height:65px !important;}
+.describe-service input[type="file"]{width:72px !important;font-size:9.7px!important;}
+.chose-category{padding:3%!important;}
+.chose-category #category{font-size:12px !important;margin:3px!important;}
+#category{font-size:13px !important;margin:2px!important;}
+.chose-time{padding:2% !important;}
+.chose-time button{font-size:13px;margin-right:6px!important;margin-top:4px;margin-bottom:4px;width:80px !important; height:30px!important; float:left !important;}
+.chose-time input[type="tel"]{font-size:13px;margin-right:6px!important;margin-top:4px;margin-bottom:4px;width:80px !important; height:30px!important;}
+.chose-budget{padding:2.5%!important;}
+.chose-budget a{margin:5px!important; margin-left:70%!important;width:25% !important;}
+.nav-tabs .btn{font-size:11px;}
+.newgig a.btn{margin-top:13px;width:110px;font-size:10px;}
+.newgig{width:80%;margin:auto;margin-top:20px!important;}
+.newgig textarea{height:35%;}
+#packg{margin-top:25px;margin-bottom:25px;}
+#packg table thead{font-size:11px}
+#packg table tbody{font-size:10px}
+#packg table #catgry{font-size:10px}
+#packg form{padding:5px;width:95%;}
+.gigTitle{padding:3.5%;}
+.gigTitle input[type=text]{height:70px;margin-bottom:20px;}
+.gigTitle input[type=search]{height:30px;margin-bottom:10px;margin-top:10px;}
+.tab-pane h3{padding-bottom:13px;margin-bottom:13px;}
+.tellRequirement{padding:11px}
+.tellRequirement div{margin:10px;padding:10px}
+.acount-seting, .security-seting, .notification{padding:15px;margin:auto;margin-bottom:15px;margin-top:15px;}
+.deactive-acount{padding:15px;margin:auto;margin-bottom:15px;font-size:10px;}
+.new-gig .btn{margin:2px;font-size:10px;}
+
+
+}
+@media screen and (min-width:768px) and (max-width:991px)
+{
+h1{font-size:28px}
+h2{font-size:25px}
+h3{font-size:23px}
+h4{font-size:20px}
+h5{font-size:17px}
+h6{font-size:15px}
+p{font-size:13px}
+a{font-size:13px!important;}
+span{width:4%}
+#foot{padding-top:20px;padding-bottom:20px;font-size:14px;}
+#foot ul>li{margin-left:12px}
+.jumbotron p,a{font-size:12px}
+.jumbo{padding-bottom:12px; padding-left:3%;}
+.jumbo img{width:80%; padding:10% 10% 10% 10%;}
+.about{font-size:38px; padding-bottom:12px; padding-top:12px;}
+#about{padding-top:25px;}
+.findout{margin-top:13px; padding-top:15px;padding-bottom:25px;}
+.findout img{padding-top:17px;width:200px;height:160px;margin:4%;}
+.div-col-img{margin-bottom:8px; margin-top:8px;width:170px; height:220px;}
+.div-col-img div{margin-bottom:12px;margin-top:160px;width:130px;height:35px;font-size:12px;}
+.srvc-bar p{font-size:13px;}
+.srvc-bar img{margin-top:7px;margin-bottom:7px; width:60px;height:60px;}
+.srvc-bar .colum{margin-top:12px;margin-bottom:12px;}
+.carousel-inner{height:35%;}
+.carousel-inner img{min-height:350px;max-height:350px;}
+.carousel-caption h2,h3,p{ margin-left:8px;}
+.bok{margin-top:5px;}
+.navbar{font-size:14px;padding-top:7px; padding-bottom:9px;}
+.first_section-profile{margin-top:15px;padding:15px;}
+.first_section{width:90%; padding:10px;line-height:1.6rem;font-size:12px;}
+.first_section p{font-size:14px;}
+.first_section img{width:27%;margin-left:35%;}
+.first_section-profile span{padding-right:10px; font-size:13px;}
+.first_section .badge{margin:7px;width:50px;}
+.first_section .btn-block{padding:1.5%;margin-top:5px; margin-bottom:5px;}
+.first_section .User-name{font-size:16px;}
+.first_section .card-footer{padding:3%; padding-left:0px;height:18%;}
+.second_section{margin-top:10px;padding-top:15px;line-height:1.7rem;width:100%;}
+.second_section .card{width:100%;height:160px;}
+#child{width:165px;height:180px;padding:5px;margin:5px;}
+#child p,a{font-size:13px!important}
+#child img{width:155px;height:85px;}
+#child span{font-size:13px; padding-left:5px;padding-right:5px;}
+#child .card-body span{padding-right:20px;}
+.new-gig{padding-left:27px;margin:auto;margin-top:30px;}
+.onechild{margin-top:1%;padding:14px;line-height:1.8rem;}
+.onechild .card-body button{margin-bottom:8px;margin-top:8px;}
+.onechild input[type=text], input[type=password] {padding:1.5% 2.5%;margin:4% 0;}
+.onechild form{padding:14px;}
+.onechild textarea,#exp_level,#eduCountry,#degreeTitle,#degreeYear,#award_year,#lang_level,input[type=text],input[type=password],input[type=tel]{font-size:13px;}
+#accordion{padding-bottom:15px;padding-top:15px;}
+.onechild #add_language,#link_data,#skill,#education_data,#certification_data{padding-bottom:15px;padding-top:15px;}
+.profile-btn{padding:2% 3%;margin: 3% 3%;width:33%;}
+.mainpage-side-bar{margin-top:27px;padding-top:10px;max-width:250px;}
+.main-rslt{font-size:13px;line-height:2rem;padding:7px;width:100%;height:100%;}
+.mainpage-side-bar form{line-height:1.5rem;}
+.mainpage-side-bar samp{font-size:13px;}
+.card-footer .vacation_mode{width:40px;height:20px;border-radius:25px;}
+.card-footer .vacation_mode .inner{top:5px;left:5px;right:5px;bottom:5px;border-radius:20px;}
+.card-footer .vacation_mode .inner .toggle{top:-2px;left:-1px;width:15px;height:15px;}
+.card-footer .vacation_mode .inner .toggle:before{top:2px;left:2px;right:2px;bottom:2px;font-size:5px;line-height:13px;}
+.card-footer .vacation_mode .inner.active .toggle{left:18px;} 
+.aceptGig input[type="checkbox"]{margin-right:15px;width:30px;height:15px;border-radius:20px;}
+.aceptGig input[type="checkbox"]:before{width:16px;height:16px;}
+.aceptGig input:checked[type="checkbox"]:before{left:16px;}
+.nav-link img{width:32px;height:32px;margin:-7px 0;margin-left:15px;}
+.navbar .dropdown-item i{font-size:13px;min-width:20px;}
+.listContain{margin-top:12px;}
+#listGigHead{height:55px;padding-left:7px;}
+#listGigBody{padding-left:3px;padding-top:3px;padding-bottom:3px;}
+#listGigBody p{font-size:11px;}
+#listGigFoter{padding:3px;padding-top:10px;padding-bottom:3px;}
+#listGigFoter p,a,samp,span{font-size:13px;}
+#listGigFoter .btn{font-size:7px;width:10px;}
+.post-req,.creatGig{width:72%!important;margin-top:15px !important;margin-bottom:15px!important;}
+.post-req span{width:17px !important; font-size:14px !important;}
+.post-req p{font-size:13px !important;}
+.describe-service{padding:3%!important;}
+.describe-service textarea{width:100%!important;height:75px !important;}
+.describe-service input[type="file"]{width:85px !important;font-size:10.5px!important;}
+.chose-category{padding:3%!important;}
+.chose-category #category{font-size:14px !important;margin:2px!important;}
+#category{font-size:14px !important;margin:2px!important;}
+.chose-time{padding:3% !important;}
+.chose-time button{font-size:14px;margin-right:7px!important;margin-top:4px;margin-bottom:4px;width:90px !important; height:33px!important; float:left !important;}
+.chose-time input[type="tel"]{font-size:14px;margin-right:7px!important;margin-top:4px;margin-bottom:4px;width:90px !important; height:33px!important;}
+.chose-budget{padding:3%!important;}
+.chose-budget a{margin:5px!important; margin-left:60%!important;width:20% !important;}
+.nav-tabs .btn{font-size:13px;}
+.newgig a.btn{margin-top:15px;width:120px;font-size:12px!important;}
+.newgig{width:75%;margin:auto;margin-top:20px!important;}
+.newgig textarea{height:35%;}
+#packg{margin-top:25px;margin-bottom:25px;}
+#packg table thead{font-size:14px}
+#packg table tbody{font-size:12px}
+#packg table #catgry{font-size:12px}
+#packg form{padding:5px;width:95%;}
+.gigTitle{padding:3.5%;}
+.gigTitle input[type=text]{height:80px;margin-bottom:20px;}
+.gigTitle input[type=search]{height:30px;margin-bottom:12px;margin-top:12px;}
+.tab-pane h3{padding-bottom:15px;margin-bottom:15px;}
+.tellRequirement{padding:13px}
+.tellRequirement div{margin:14px;padding:13px}	
+.acount-seting, .security-seting, .notification{padding:17px;margin:auto;margin-bottom:17px;margin-top:17px;}
+.deactive-acount{padding:17px;margin:auto;margin-bottom:17px;font-size:11px;}
+.new-gig .btn{margin:2px;font-size:11px;}
+
+}
+
+@media screen and (min-width:992px) and (max-width:1500px)
+{
+h1{font-size:35px}
+h2{font-size:32px}
+h3{font-size:28px}
+h4{font-size:25px}
+h5{font-size:20px}
+h6{font-size:18px}
+p{font-size:15px}
+a{font-size:15px!important;}
+span{width:3%}
+#foot{padding-top:25px;padding-bottom:25px;font-size:16px;}
+#foot ul>li{margin-left:13px}
+.jumbotron p,a{font-size:14px}
+.jumbo{padding-bottom:15px; padding-left:4%;}
+.jumbo img{width:100%; padding:13% 13% 13% 13%;}
+.about{font-size:45px; padding-bottom:15px; padding-top:15px;}
+#about{padding-top:30px;}
+.findout{margin-top:15px; padding-top:17px;padding-bottom:30px;}
+.findout img{padding-top:20px;width:250px;height:190px;margin:5%;}
+.div-col-img{margin-bottom:10px; margin-top:10px;width:150; height:250px;}
+.div-col-img div{margin-bottom:20px;margin-top:180px;width:150px;height:50px;font-size:14px;}
+.srvc-bar p{font-size:15px;}
+.srvc-bar img{margin-top:10px;margin-bottom:10px; width:65px;height:65px;}
+.srvc-bar .colum{margin-top:15px;margin-bottom:15px;}
+.carousel-inner{height:40%;}
+.carousel-inner img{min-height:400px;max-height:400px;}
+.carousel-caption h2,h3,p{ margin-left:10px;}
+.bok{margin-top:5px;}
+.navbar{font-size:16px;padding-top:10px; padding-bottom:15px;}
+.first_section-profile{margin-top:22px;padding:20px;}
+.first_section-profile span{padding-right:10px;font-size:15px;}
+.first_section{width:100%; padding:15px;line-height:2rem;font-size:15px;}
+.first_section p{font-size:16px;}
+.first_section img{width:35%;margin-left:30%;}
+.first_section .badge{margin:10px;width:60px;}
+.first_section .btn-block{padding:2%;margin-top:5px; margin-bottom:5px;}
+.first_section .User-name{font-size:20px;}
+.first_section .card-footer{padding:5%; padding-left:0px;height:25%;}
+.second_section{margin-top:20px;padding-top:20px;line-height:2rem}
+.second_section .card{width:100%;height:190px;}
+#child{width:180px;height:200px;padding:5px;margin:5px;}
+#child p,a{font-size:15px!important}
+#child img{width:170px;height:90px;}
+#child span{font-size:14px; padding-left:5px;padding-right:5px;}
+#child .card-body span{padding-right:25px;}
+.new-gig{padding-left:20px;margin:auto;margin-top:30px;}
+.onechild{margin-top:2%;padding:20px;line-height:2.1rem;width:100%;}
+.onechild .card-body button{margin-bottom:12px;margin-top:12px;}
+.onechild input[type=text], input[type=password] {padding:2% 4%;margin:5% 0;}
+.onechild form{padding:17px;}
+.onechild textarea,#exp_level,#eduCountry,#degreeTitle,#degreeYear,#award_year,#lang_level,input[type=text]{font-size:15px;}
+#accordion{padding-bottom:20px;padding-top:20px;}
+.onechild #add_language,#link_data,#skill,#education_data,#certification_data{padding-bottom:20px;padding-top:20px;}
+.profile-btn{padding:3% 4%;margin: 4% 4%;width:42%;}
+.mainpage-side-bar{margin-top:40px;padding-top:20px;max-width:250px;}
+.main-rslt{font-size:14px;line-height:2.5rem;padding:10px;width:100%;height:100%;}
+.main-rslt a{font-size:14px!important;}
+.mainpage-side-bar form{line-height:2rem;}
+.mainpage-side-bar samp{font-size:14px;}
+.card-footer .vacation_mode{width:50px;height:25px;border-radius:25px;}
+.card-footer .vacation_mode .inner{top:5px;left:5px;right:5px;bottom:5px;border-radius:20px;}
+.card-footer .vacation_mode .inner .toggle{top:-3px;left:-1px;width:18px;height:18px;}
+.card-footer .vacation_mode .inner .toggle:before{top:2px;left:2px;right:2px;bottom:2px;font-size:5px;line-height:15px;}
+.card-footer .vacation_mode .inner.active .toggle{left:23px;} 
+.aceptGig input[type="checkbox"]{margin-right:20px;width:40px;height:20px;border-radius:20px;}
+.aceptGig input[type="checkbox"]:before{width:20px;height:20px;}
+.aceptGig input:checked[type="checkbox"]:before{left:20px;}
+.nav-link img{width:36px;height:36px;margin:-8px 0;margin-right:10px;}
+.navbar .dropdown-item i{font-size:16px;min-width:22px;}
+.listContain{margin-top:15px;}
+#listGigHead{height:60px;padding-left:10px;}
+#listGigBody{padding-left:5px;padding-top:5px;padding-bottom:5px;}
+#listGigBody p{font-size:15px;}
+#listGigFoter{padding:5px;padding-top:15px;padding-bottom:5px;}
+#listGigFoter p,a,samp,span{font-size:15px;}
+.post-req,.creatGig{width:67%!important;margin-top:20px !important;margin-bottom:20px!important;}
+.post-req span{width:25px !important; font-size:20px !important;}
+.post-req p{font-size:16px !important;}
+.describe-service{padding:5%!important;}
+.describe-service textarea{width:100%!important;height:80px !important;}
+.chose-category{padding:5%!important;}
+.chose-category #category{font-size:16px !important;margin:2px!important;}
+#category{font-size:16px !important;margin:3px!important;}
+.chose-time{padding:4% !important;}
+.chose-time button{font-size:16px;margin-right:13px!important;margin-top:4px;margin-bottom:4px;width:110px !important; height:37px!important; float:left !important;}
+.chose-time input[type="tel"]{font-size:16px;margin-right:13px!important;margin-top:4px;margin-bottom:4px;width:110px !important; height:37px!important;}
+.chose-budget{padding:5%!important;}
+.chose-budget a{margin:10px!important; margin-left:55%!important;width:15% !important;}
+.nav-tabs .btn{font-size:15px;}
+.newgig a.btn{margin-top:20px;}
+.newgig{width:67%;margin:auto;margin-top:20px;}
+.newgig textarea{height:40%;}
+#packg{margin-top:30px;margin-bottom:30px;}
+#packg table thead{font-size:16px}
+#packg table tbody{font-size:14px}
+#packg table #catgry{font-size:14px}
+#packg form{padding:5px;width:95%;}
+.gigTitle{padding:4%;}
+.gigTitle input[type=text]{height:100px;margin-bottom:20px;}
+.tab-pane h3{padding-bottom:15px;margin-bottom:15px;}
+.tellRequirement{padding:15px}
+.tellRequirement div{margin:17px;padding:16px}
+.acount-seting, .security-seting, .notification{padding:20px;margin:auto;margin-bottom:20px;margin-top:20px;}
+.deactive-acount{padding:20px;margin:auto;margin-bottom:20px;font-size:12px;}
+.new-gig .btn{margin:3px;font-size:12px;}
+
+}
+
+
+
+/*********************************************************************
+992px(min-width-md)
+991px(max-width-sm)
+767px(max-width-xs)
+409px(service bar pic re-size)
+
+*********************************************************************/
