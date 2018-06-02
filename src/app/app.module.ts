@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
+
+
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +17,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateGigComponent } from './create-gig/create-gig.component';
 import { SettingsComponent } from './settings/settings.component';
 import { DetailAboutUsComponent } from './detail-about-us/detail-about-us.component';
+import { SignupComponent } from './signup/signup.component';
+import { AuthService } from './auth.service';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 const appRoutes : Routes=[
   
@@ -42,15 +48,18 @@ const appRoutes : Routes=[
     DashboardComponent,
     CreateGigComponent,
     SettingsComponent,
-    DetailAboutUsComponent
+    DetailAboutUsComponent,
+    SignupComponent,
+
  ],
   imports: [
+    
+    FormsModule,
+    HttpModule,
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
-  providers: [
-    // no need to place any providers due to the `providedIn` flag...
-  ],
+  providers: [AuthService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -7,19 +7,19 @@
 					<h4 class="text-center">Sign In</h4>
 				</div>
 					<div class="modal-body">
-					<form>					
+						<form (ngSubmit)="onLogin(f)" #f="ngForm">				
 					<div class="text-center social-btn">
             <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
 			<a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
 					</div>
 		<div class="or-seperator"><i>or</i></div>						
 						<div class="form-group">
-							<input type="text" name="popupUsername" class="form-control" placeholder="Enter User Name">
+							<input type="email" name="email" ngModel class="form-control" placeholder="Enter User Name">
 						</div>
 						<div class="form-group">
-							<input type="password" name="popupUserpas" class="form-control" placeholder="Enter User Password">
+							<input type="password" name="password" ngModel class="form-control" placeholder="Enter User Password">
 						</div>
-						<a href="dashboard" class="btn btn-primary btn-group-justified">Sign In</a><br>
+						<button type="submit">Log In</button>
 						
 						<div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox" name="joinChkRember"> Remember Me</label>
@@ -33,38 +33,4 @@
 					</div></div></div>
  
 			
-		<!--/pop up Join form-->
-	<div class="modal" id="popupJoinform" tabindex="-1">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="text-center">Join Us</h4>
-				</div>
-					<div class="modal-body">
-					<form>
-					<div class="text-center social-btn">
-            <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
-			<a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
-					</div>
-		<div class="or-seperator"><i>or</i></div>
-						<div class="form-group">
-							<input type="text" name="joinUsername" class="form-control" placeholder="Enter User Name">
-						</div>
-						<div class="form-group">
-							<input type="password" name="joinUserpas" class="form-control" placeholder="Enter User Password">
-						</div>
-						<div class="form-group">
-							<input type="tel" name="jpinUsernum" class="form-control" placeholder="Enter Contact Number">
-						</div>
-						<a href="main-page.html" class="btn btn-primary btn-group-justified">Log In</a><br>
-						<div class="checkbox">
-						<label><input type="checkbox" name="chkRember"> Remember Me</label>
-						</div>						
-					</form>
-					</div>
-					<div class="modal-footer">
-						<p>Not a Member Yet? <a href="#">Join Now</a></p>
-					</div>
-			</div></div>
-	</div>
-	
+		
