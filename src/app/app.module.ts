@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import{routes} from './app.router';
 
+
+
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -30,6 +32,10 @@ import { AlarmComponent } from './alarm/alarm.component';
 import { OthersComponent } from './others/others.component';
 import { CleanComponent } from './clean/clean.component';
 import { ServComponent } from './serv/serv.component';
+
+import { AuthService } from './auth.service';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -64,12 +70,13 @@ import { ServComponent } from './serv/serv.component';
     ServComponent
  ],
   imports: [
+    
+    FormsModule,
+    HttpModule,
     BrowserModule,
     routes
   ],
-  providers: [
-    // no need to place any providers due to the `providedIn` flag...
-  ],
+  providers: [AuthService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
