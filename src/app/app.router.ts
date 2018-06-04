@@ -30,8 +30,10 @@ import { AlarmComponent } from './alarm/alarm.component';
 import { OthersComponent } from './others/others.component';
 import { CleanComponent } from './clean/clean.component';
 import { ServComponent } from './serv/serv.component';
+import { FrgtPaswrdComponent } from './frgt-paswrd/frgt-paswrd.component';
+import { RenewPassComponent } from './renew-pass/renew-pass.component';
 
-export const router : Routes=[
+ const router : Routes=[
   
   {path:'home' , component:SiteLayoutComponent },
   {path:'about' , component:AboutComponent },
@@ -55,6 +57,8 @@ export const router : Routes=[
   {path:'settings',component:SettingsComponent},
   {path:'clean',component:CleanComponent},
   {path:'serv',component:ServComponent},
+  {path:'forgetPassword',component:FrgtPaswrdComponent},
+  {path:'renewPassword',component:RenewPassComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'**',redirectTo:'/home',pathMatch:'full'},
   ];

@@ -32,6 +32,8 @@ import { AlarmComponent } from './alarm/alarm.component';
 import { OthersComponent } from './others/others.component';
 import { CleanComponent } from './clean/clean.component';
 import { ServComponent } from './serv/serv.component';
+import { FrgtPaswrdComponent } from './frgt-paswrd/frgt-paswrd.component';
+import { RenewPassComponent } from './renew-pass/renew-pass.component';
 
 import { AuthService } from './auth.service';
 import { FormsModule } from '@angular/forms';
@@ -67,7 +69,9 @@ import { HttpModule } from '@angular/http';
     AlarmComponent,
     OthersComponent,
     CleanComponent,
-    ServComponent
+    ServComponent,
+    FrgtPaswrdComponent,
+    RenewPassComponent
  ],
   imports: [
     
