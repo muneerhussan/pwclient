@@ -7,30 +7,57 @@
 					<h4 class="text-center">Sign In</h4>
 				</div>
 					<div class="modal-body">
-						<form (ngSubmit)="onLogin(f)" #f="ngForm">				
+							
+			<form #loginform="ngForm" (ngSubmit)="onLogin(loginform)">		
+
+				<div class="alert alert-danger" [hidden]="!error">
+                      {{error}}
+				</div>
 					<div class="text-center social-btn">
-            <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
-			<a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
+						<a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
+						<a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
 					</div>
-		<div class="or-seperator"><i>or</i></div>						
-						<div class="form-group">
-							<input type="email" name="email" ngModel class="form-control" placeholder="Enter User Name">
-						</div>
-						<div class="form-group">
-							<input type="password" name="password" ngModel class="form-control" placeholder="Enter User Password">
-						</div>
-						<button type="submit">Log In</button>
+				<div class="or-seperator"><i>or</i></div>	
+				
+				
+		    <div class="form-group" [class.has-error]="emailcontroller.invalid && emailcontroller.touched"
+							[class.has-success]="emailcontroller.valid">
+							<input  type="text" autofocus="autofocus" required email name="email" [(ngModel)]="form.email"
+						    pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+							ngModel class="form-control" #emailcontroller="ngModel" placeholder="Enter User Email">
+							<span class="help-block" *ngIf="emailcontroller.errors?.required && emailcontroller.touched">
+					Email is required
+					</span>
+
+			</div>
+				
+			
+			<div class="form-group" [class.has-error]="passwordcontroller.invalid && passwordcontroller.touched"
+							[class.has-success]="passwordcontroller.valid">
+							<input  required type="password" name="password"  [(ngModel)]="form.password"
+							ngModel class="form-control" #passwordcontroller="ngModel" placeholder="Enter Password">
+							<span class="help-block" *ngIf="passwordcontroller.touched && passwordcontroller.errors?.required">
+							Password Required
+							</span>
+		    </div>
+		    <div>
+
+				<button type="submit" class="btn btn-primary" [disabled]="loginform.invalid">Log In</button>
+			</div>
+			
 						
-						<div class="clearfix">
-            <label class="pull-left checkbox-inline"><input type="checkbox" name="joinChkRember"> Remember Me</label>
-            <a href="#" class="pull-right" id="linkforget">Forget Password?</a>
-						</div>		
-					</form>
+					<div class="clearfix">
+							<label class="pull-left checkbox-inline"><input type="checkbox" name="joinChkRember"> Remember Me</label>
+							<a href="#" class="pull-right" id="linkforget">Forget Password?</a>
+					</div>		
+	</form>
 					</div>
-					<div class="modal-footer">
-						<p>Not a Member Yet? <a href="#" data-toggle="modal" data-target="#popupJoinform">Join Now</a></p>
+							<div class="modal-footer">
+								<p>Not a Member Yet? <a href="#" data-toggle="modal" data-target="#popupJoinform">Join Now</a></p>
+							</div>
 					</div>
-					</div></div></div>
+				</div>
+			</div>
  
 			
 		

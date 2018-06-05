@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-
-
-
+import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -21,7 +19,6 @@ import { SignupComponent } from './signup/signup.component';
 import { AuthService } from './auth.service';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 const appRoutes : Routes=[
   
   {path:'home' , component:SiteLayoutComponent },
@@ -50,6 +47,8 @@ const appRoutes : Routes=[
     SettingsComponent,
     DetailAboutUsComponent,
     SignupComponent,
+    ConfirmEqualValidatorDirective,
+
 
  ],
   imports: [

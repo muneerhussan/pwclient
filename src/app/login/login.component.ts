@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { error } from 'util';
+import { Router } from '@angular/router';
+import { Http } from '@angular/http';
+
 
 @Component({
   selector: 'app-login',
@@ -10,16 +13,26 @@ import { error } from 'util';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService:AuthService) { }
-
+  public form={
+    email:null,
+    password:null,
+  } 
+  
+  constructor(private authService:AuthService,
+              private router: Router) {
+    
+   }
   ngOnInit() {
   }
 
+  btnClick= function () {
+    this.router.navigate(['/dashboard']);
+};
+
   onLogin(form:NgForm){
-    this.authService.login(form.value.email,form.value.password)
+    this.authService.login(this.form)
     .subscribe(
-      Response=>console.log(Response),
-      error=>console.log(error),
+      error=>console.log(error)
     )
   }
 }
