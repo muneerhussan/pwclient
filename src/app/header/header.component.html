@@ -6,7 +6,7 @@
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-<a href="new1.html" class="navbar-brand" style="padding-top:0px;">
+<a routerLink="/home" class="navbar-brand" style="padding-top:0px;">
 <img src="assets/logo.png" alt="Logo" style="width:70px;"></a>
 
   </div>
@@ -19,25 +19,26 @@
 <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-search"style="color:white;padding:2px;"></span></button>
 </span>
 </div>
+
 </form>	
-      <li><a routerLink="/home" class="active">Home</a></li>
+      <li><a routerLink="/home">Home</a></li>
       <li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
       <ul class="dropdown-menu">					
-          <li><a href="Carpenter.html" class="dropdown-item">Carpenter</a></li>
-          <li><a href="paint.html" class="dropdown-item">Decorator</a></li>
-          <li><a href="plumber.html" class="dropdown-item">Plumber</a></li>
-          <li><a href="gas.html" class="dropdown-item">Gas</a></li>
-          <li><a href="roofing.html" class="dropdown-item">Roofing</a></li>
-          <li><a href="handyman.html" class="dropdown-item">HandyMan</a></li>
-          <li><a href="lock.html" class="dropdown-item">Locks</a></li>
-          <li><a href="alarm.html" class="dropdown-item">Alarms</a></li>
-          <li><a href="clean.html" class="dropdown-item">Cleaner</a></li>
-          <li><a href="other.html" class="dropdown-item">Others</a></li>
+          <li><a routerLink="/carpenter" class="dropdown-item">Carpenter</a></li>
+          <li><a routerLink="/paint" class="dropdown-item">Decorator</a></li>
+          <li><a routerLink="/plumber" class="dropdown-item">Plumber</a></li>
+          <li><a routerLink="/gas" class="dropdown-item">Gas</a></li>
+          <li><a routerLink="/roof" class="dropdown-item">Roofing</a></li>
+          <li><a routerLink="/handyman" class="dropdown-item">HandyMan</a></li>
+          <li><a routerLink="/lock" class="dropdown-item">Locks</a></li>
+          <li><a routerLink="/alarm" class="dropdown-item">Alarms</a></li>
+          <li><a routerLink="/clean" class="dropdown-item">Cleaner</a></li>
+          <li><a routerLink="/others" class="dropdown-item">Others</a></li>
       </ul>
       </li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="#" data-toggle="modal" data-target="#popupLoginform">Sign In</a></li>
-      <li><a href="#" data-toggle="modal" data-target="#popupJoinform">Join</a></li>
+      <li><a routerLink="/about">About Us</a></li>
+      <li><a href="#"  data-toggle="modal" data-target="#popupLoginform">Sign In</a></li>
+      <li><a href="#"  data-toggle="modal" data-target="#popupJoinform">Join</a></li>
   </ul>
   </div>
 </nav>

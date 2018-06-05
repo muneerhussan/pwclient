@@ -878,7 +878,33 @@ color:black;
 	font-size:12px;
 }
 
-
+.forgetpass{
+	width:65%;
+	background-color:white;
+	margin:auto;
+	margin-top:40px;
+	margin-bottom:20px;
+	padding:0;
+	border:.5px solid rgb(176,180,182);
+	 box-sizing: border-box;
+}
+.forgetpass .content{
+	padding:2%;
+	margin-top:20px;
+	margin-bottom:20px;
+	padding-bottom:20px;
+}
+.forgetpass .content .btn{
+	width:30%;
+	margin:auto;
+	float:right;
+}
+.forgetpass input[type=text]{
+	width:100%;
+	margin-right:1%;
+	margin:1%;
+	
+}
 
 
 /* Smartphones (portrait and landscape) ----------- */
