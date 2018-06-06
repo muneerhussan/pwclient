@@ -3,11 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import{routes} from './app.router';
 
-
-
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
 import { ImagesliderComponent } from './imageslider/imageslider.component';
 import { ServicesBarComponent } from './services-bar/services-bar.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -34,6 +31,12 @@ import { CleanComponent } from './clean/clean.component';
 import { ServComponent } from './serv/serv.component';
 import { FrgtPaswrdComponent } from './frgt-paswrd/frgt-paswrd.component';
 import { RenewPassComponent } from './renew-pass/renew-pass.component';
+import { MainHeaderComponent } from './layout/main-header/main-header.component';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { ProfileHeaderComponent } from './layout/profile-header/profile-header.component';
+import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
+import { GigListViewComponent } from './gig-list-view/gig-list-view.component';
+import { ManageRequestComponent } from './manage-request/manage-request.component';
 
 import { AuthService } from './auth.service';
 import { FormsModule } from '@angular/forms';
@@ -45,7 +48,6 @@ import { HttpModule } from '@angular/http';
     AppComponent,
     LoginComponent,
     FooterComponent,
-    HeaderComponent,
     ImagesliderComponent,
     ServicesBarComponent,
     ProfileComponent,
@@ -71,7 +73,13 @@ import { HttpModule } from '@angular/http';
     CleanComponent,
     ServComponent,
     FrgtPaswrdComponent,
-    RenewPassComponent
+    RenewPassComponent,
+    MainHeaderComponent,
+    MainLayoutComponent,
+    ProfileHeaderComponent,
+    ProfileLayoutComponent,
+    GigListViewComponent,
+    ManageRequestComponent
  ],
   imports: [
     

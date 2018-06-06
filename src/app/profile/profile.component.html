@@ -1,75 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
 
- <title>Profile</title>
- 		<script src="js/jquery-3.3.1.min.js"></script>
-</head>
-<body>
 <div class="container-fluid">
-	<!--navbar and img slider-->
-		<div>
-		<nav class="navbar navbar-expand-lg navbar-default fixed-top">		
-		<!--main nav bar-->
-			<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-	<a href="new1.html" class="navbar-brand" style="padding-top:0px;">
-	<img src="assets/logo.png" alt="Logo" style="width:65px;"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-right" style="margin-right:3px;">
-				<form class="navbar-form navbar-left">
-		<div class="input-group">
-		<input type="text" id="search" class="form-control" placeholder="Find Services">
-<span class="input-group-btn">
-  <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-search"style="color:white;padding:2px;"></span></button>
- </span>
-		</div>
-		</form>
-				<li><a href="home" class="active">Home</a></li>
-				<li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
-				<ul class="dropdown-menu">					
-					<li><a href="Carpenter.html" class="dropdown-item">Carpenter</a></li>
-					<li><a href="paint.html" class="dropdown-item">Decorator</a></li>
-					<li><a href="plumber.html" class="dropdown-item">Plumber</a></li>
-					<li><a href="gas.html" class="dropdown-item">Gas</a></li>
-					<li><a href="roofing.html" class="dropdown-item">Roofing</a></li>
-					<li><a href="handyman.html" class="dropdown-item">HandyMan</a></li>
-					<li><a href="lock.html" class="dropdown-item">Locks</a></li>
-					<li><a href="alarm.html" class="dropdown-item">Alarms</a></li>
-					<li><a href="clean.html" class="dropdown-item">Cleaner</a></li>
-					<li><a href="other.html" class="dropdown-item">Others</a></li>
-				</ul>
-				</li>
-				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Selling</a>
-				<ul class="dropdown-menu">
-					<li><a href="#" class="dropdown-item">Orders</a></li>
-					<li><a href="gig.html" class="dropdown-item">Gigs</a></li>
-				</ul></li>
-				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Buying</a>
-				<ul class="dropdown-menu">
-					<li><a href="#" class="dropdown-item">How We Work</a></li>
-					<li><a href="manage-request.html" class="dropdown-item">Manage Request</a></li>
-				</ul></li>
-				<ul class="nav navbar-nav navbar-right">
-			<li class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="assets/profile/me1.jpg" class="avatar" alt="Profile Img"><b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="profile" class="dropdown-item"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
-					<li><a href="settings" class="dropdown-item"><i class="glyphicon glyphicon-tasks"></i> Settings</a></li>
-					<li class="divider dropdown-divider"></li>
-					<li><a href="new1.html" class="dropdown-item"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
-				</ul>
-			</li>
-		</ul>
-			</ul>
-			</div>
-		</nav>
-	</div>
 	
 	<!--Profile body or grid-->
 	<div class="row">
@@ -400,7 +330,7 @@ Note:Your personal information will not displayed to the buyer."><b>Linked Accou
 		<div class="card">
     <div class="card-body">
 	<div class="new-gig">
-	<a href="create_gig"><span class="text-success glyphicon glyphicon-plus"></span></a>
+	<a routerLink="/create_gig"><span class="text-success glyphicon glyphicon-plus"></span></a>
 	</div>
       <p class="text-center">Create A New Gig</p>
     </div>
@@ -410,84 +340,7 @@ Note:Your personal information will not displayed to the buyer."><b>Linked Accou
 			</section>
 		</div>
 	</div>
-
-<!--list in footer-->
- <section>
-        <div class="jumbotron">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <h4><b>Services</b></h4>
-                        <ul>
-                            <li><a href="paint.html">Decorating</a></li>
-                            <li><a href="plumber.html">Plumbering</a></li>
-                            <li><a href="lock.html">Locks & Glazing</a></li>
-                            <li><a href="electric.html">Electrical</a></li>
-							<li><a href="security.html">Security </a></li>
-                            <li><a href="clean.html">Cleaning</a></li>
-                            <li><a href="gas.html">Gas Check</a></li>
-							<li><a href="other.html">Others</a></li>
-                        </ul>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <h4><b>About Us</b></h4>
-                        <p>A One Stop Shop for all your Property Maintenance needs.
-						As experts in the field with many years in the business,
-						our objective is simple:to provide a superior service at a very competitive price.</p> 
-                </div><!--/.col-md-3-->
-
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <h4><b>Contact Details</b></h4>
-                        <p>Employment Resource Center
-						  Model Town Lahore,Pakistan</p>
-						<p>Customer Care Line:<br>
-						+923046080781</p>
-                </div><!--/.col-md-3-->
-
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <h4><b>Opening Hours</b></h4>
-                        <p>We are open 24/7 for emergencies:<br>
-						Monday - Sunday</p>   
-                </div><!--/.col-md-3-->
-            </div>
-        </div>
-    </section>
-
-	<!--/#bottom-->
-
-    <footer id="foot">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-xs-6">
-                    &copy; 2018 <a href="new1.html" title=" Waheed Shahzad">Resource Center</a>. All Rights Reserved.
-                </div>
-                <div class="col-sm-6 col-xs-6">
-                    <ul class="pull-right">
-                        <li><a href="new1.html">Home</a></li>
-                        <li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Services <b class="caret"></b></a>
-				<ul class="dropdown-menu">					
-					<li><a href="Carpenter.html" class="dropdown-item">Carpenter</a></li>
-					<li><a href="paint.html" class="dropdown-item">Decorator</a></li>
-					<li><a href="plumber.html" class="dropdown-item">Plumber</a></li>
-					<li><a href="gas.html" class="dropdown-item">Gas</a></li>
-					<li><a href="roofing.html" class="dropdown-item">Roofing</a></li>
-					<li><a href="handyman.html" class="dropdown-item">HandyMan</a></li>
-					<li><a href="lock.html" class="dropdown-item">Locks</a></li>
-					<li><a href="alarm.html" class="dropdown-item">Alarms</a></li>
-					<li><a href="clean.html" class="dropdown-item">Cleaner</a></li>
-					<li><a href="other.html" class="dropdown-item">Others</a></li>
-				</ul>
-				</li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#popupLoginform">Sign In</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#popupJoinform">Join</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-	
-	</div>
+		</div>
 
 <script>
 $(document).ready(function(){
@@ -510,7 +363,3 @@ $('.inner').toggleClass('active')
 var modal = document.getElementById('mdlid1');
 var modal2 = document.getElementById('mdlid2');
 </script>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</html>

@@ -5,7 +5,6 @@ import{Routes,RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
 import { ImagesliderComponent } from './imageslider/imageslider.component';
 import { ServicesBarComponent } from './services-bar/services-bar.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -32,10 +31,23 @@ import { CleanComponent } from './clean/clean.component';
 import { ServComponent } from './serv/serv.component';
 import { FrgtPaswrdComponent } from './frgt-paswrd/frgt-paswrd.component';
 import { RenewPassComponent } from './renew-pass/renew-pass.component';
+import { MainHeaderComponent } from './layout/main-header/main-header.component';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { ProfileHeaderComponent } from './layout/profile-header/profile-header.component';
+import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
+import { GigListViewComponent } from './gig-list-view/gig-list-view.component';
+import { ManageRequestComponent } from './manage-request/manage-request.component';
 
  const router : Routes=[
-  
+   
+  {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'home' , component:SiteLayoutComponent },
+  {
+    path:'',
+    component:MainLayoutComponent,
+    children:[
+
+  //site route goes here
   {path:'about' , component:AboutComponent },
   {path:'alarm' , component:AlarmComponent },
   {path:'carpenter' , component:CarpenterComponent },
@@ -50,16 +62,28 @@ import { RenewPassComponent } from './renew-pass/renew-pass.component';
   {path:'roof' , component:RoofComponent },
   {path:'security' , component:SecurityComponent },
   {path:'detailAboutUs' , component:DetailAboutUsComponent },
+  {path:'clean',component:CleanComponent},
+  {path:'serv',component:ServComponent},
+  {path:'forgetPassword',component:FrgtPaswrdComponent},
+  {path:'renewPassword',component:RenewPassComponent},
+  {path:'login', component: LoginComponent},
+  
+]
+},
+//profile routes goes here
+{
+  path:'',
+  component:ProfileLayoutComponent,
+  children:[
   {path:'profile', component : ProfileComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component:DashboardComponent},
   {path:'create_gig',component:CreateGigComponent},
   {path:'settings',component:SettingsComponent},
-  {path:'clean',component:CleanComponent},
-  {path:'serv',component:ServComponent},
-  {path:'forgetPassword',component:FrgtPaswrdComponent},
-  {path:'renewPassword',component:RenewPassComponent},
-  {path:'',redirectTo:'/home',pathMatch:'full'},
+  {path:'gig-listView',component:GigListViewComponent},
+  {path:'manage-request',component:ManageRequestComponent},
+]
+},
   {path:'**',redirectTo:'/home',pathMatch:'full'},
   ];
   export const routes:ModuleWithProviders = RouterModule.forRoot(router);
