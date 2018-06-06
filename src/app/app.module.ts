@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
 import{routes} from './app.router';
 
 import { LoginComponent } from './login/login.component';
@@ -38,10 +39,10 @@ import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.c
 import { GigListViewComponent } from './gig-list-view/gig-list-view.component';
 import { ManageRequestComponent } from './manage-request/manage-request.component';
 
+import {SignupComponent}  from './signup/signup.component';
 import { AuthService } from './auth.service';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 
 @NgModule({
   declarations: [
@@ -56,6 +57,9 @@ import { HttpModule } from '@angular/http';
     CreateGigComponent,
     SettingsComponent,
     DetailAboutUsComponent,
+    SignupComponent,
+    ConfirmEqualValidatorDirective,
+
     AboutComponent,
     MainPagaContentComponent,
     CarpenterComponent,

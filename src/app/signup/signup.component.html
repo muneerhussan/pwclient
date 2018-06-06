@@ -1,0 +1,88 @@
+<!--/pop up Join form-->
+<div class="modal" id="popupJoinform" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="text-center">Join Us</h4>
+         </div>
+          <div class="modal-body">
+  <form #signupform="ngForm" (ngSubmit)="onSignup(signupform)">
+          <div class="text-center social-btn">
+            <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
+            <a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
+            </div>
+            <div class="or-seperator"><i>or</i></div>
+
+
+      <div class="form-group" [class.has-error]="fullnamecontroler.invalid && fullnamecontroler.touched"
+          [class.has-success]="fullnamecontroler.valid">
+            <input required pattern="[a-zA-Z][a-zA-Z ]+"
+            type="text" name="name" autofocus="autofocus" [(ngModel)]="form.name"
+            ngModel class="form-control" #fullnamecontroler="ngModel" placeholder="Enter User Name" required>
+            <span class="help-block" *ngIf="fullnamecontroler.invalid && fullnamecontroler.touched">
+              Name Required
+            </span>
+            <span class="help-block" *ngIf="fullnamecontroler.invalid && fullnamecontroler.errors.pattern ">
+             Name should be in alphabets
+            </span>
+      </div>
+
+
+          <div class="form-group" [class.has-error]="emailcontroller.invalid && emailcontroller.touched"
+          [class.has-success]="emailcontroller.valid">
+            <input type="text" required email name="email" [(ngModel)]="form.email"
+            required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+            ngModel class="form-control" #emailcontroller="ngModel" placeholder="Enter User Email">
+              <span class="help-block" *ngIf="emailcontroller.errors?.required && emailcontroller.touched">
+                Email is required
+              </span>
+          </div>
+
+          <div class="form-group" [class.has-error]="passwordcontroller.invalid && passwordcontroller.touched"
+              [class.has-success]="passwordcontroller.valid">
+                <input required type="password" name="password"  [(ngModel)]="form.password"
+                ngModel class="form-control" #passwordcontroller="ngModel" placeholder="Enter Password">
+                <span class="help-block" *ngIf="passwordcontroller.touched && passwordcontroller.errors?.required">
+                Password Required
+                </span>
+          </div>
+
+          <div class="form-group" [class.has-error]="confirmpasscontroller.invalid && confirmpasscontroller.touched"
+              [class.has-success]="confirmpasscontroller.valid">
+                <input appConfirmEqualValidator="password" required type="password" 
+                name="c_password" 
+                [(ngModel)]="form.c_password"
+                ngModel class="form-control" #confirmpasscontroller="ngModel" placeholder="Confirm Password">
+                <span class="help-block" *ngIf="confirmpasscontroller.touched && confirmpasscontroller.errors?.required">
+                Confrimaion Password Required
+                </span>
+                  <span class="help-block"
+                      *ngIf="confirmpasscontroller.touched && confirmpasscontroller.errors?.notEqual &&
+                        !confirmpasscontroller.errors?.required">
+                       Password and Confirm Password does not match
+                  </span>
+          </div>
+
+          <div class="form-group" [class.has-error]="phonecontroller.invalid && phonecontroller.touched"
+          [class.has-success]="phonecontroller.valid">
+            <input type="text" name="phone" [(ngModel)]="form.phone" 
+            ng-minlength="10" ng-maxlength="10" required pattern="[0-9]*"
+            ngModel class="form-control" #phonecontroller="ngModel" placeholder="Contact No">
+              <span class="help-block" *ngIf="phonecontroller.errors?.required && phonecontroller.touched 
+              && phonecontroller.$errors?.number">
+                Contact No Required
+              </span>
+          </div>
+
+          <button type="submit" class="btn btn-primary" [disabled]="signupform.invalid">Sign Up</button>
+          
+          <div class="checkbox">
+          <label><input type="checkbox" name="chkRember"> Remember Me</label>
+          </div>						
+        </form>
+        </div>
+        <div class="modal-footer">
+          <p>Not a Member Yet? <a href="#">Join Now</a></p>
+        </div>
+    </div></div>
+</div>
