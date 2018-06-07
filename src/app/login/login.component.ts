@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AuthService } from '../auth.service';
 import { error } from 'util';
 import { Router } from '@angular/router';
-import { Http } from '@angular/http';
+import { AuthService } from '../auth.service';
+import { TokenService } from '../Services/token.service';
+import {HttpClient} from '@angular/common/http';
+
 
 
 @Component({
@@ -17,9 +19,14 @@ export class LoginComponent implements OnInit {
     email:null,
     password:null,
   } 
-  
+  public error=null;
+  public data=null;
+
   constructor(private authService:AuthService,
-              private router: Router) {
+              private router: Router,
+              private token:TokenService,
+              private http : HttpClient
+            ) {
     
    }
   ngOnInit() {
@@ -29,10 +36,23 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/dashboard']);
 };
 
-  onLogin(form:NgForm){
-    this.authService.login(this.form)
-    .subscribe(
-      error=>console.log(error)
+  private onLogin(form:NgForm){
+    this.authService.login(this.form).subscribe(
+       error => this.handleError(error),
+       data  => this.handleResponse(data),
+
+       
     )
   }
+  handleError(error)
+  {
+     this.error=error.message;
+  }
+
+  handleResponse(data)
+  {
+      console.log(data.code);
+  }
+
+
 }

@@ -10,16 +10,14 @@
 							
 			<form #loginform="ngForm" (ngSubmit)="onLogin(loginform)">		
 
-				<div class="alert alert-danger" [hidden]="!error">
-                      {{error}}
-				</div>
+			
 					<div class="text-center social-btn">
 						<a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
 						<a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
 					</div>
 				<div class="or-seperator"><i>or</i></div>	
 				
-				
+				<div class="alert alert-danger" [hidden]="!error">{{error}}</div>
 		    <div class="form-group" [class.has-error]="emailcontroller.invalid && emailcontroller.touched"
 							[class.has-success]="emailcontroller.valid">
 							<input  type="text" autofocus="autofocus" required email name="email" [(ngModel)]="form.email"
@@ -41,14 +39,14 @@
 							</span>
 		    </div>
 		    <div>
-
+					
 				<button type="submit" class="btn btn-primary" [disabled]="loginform.invalid">Log In</button>
 			</div>
 			
 						
 					<div class="clearfix">
 							<label class="pull-left checkbox-inline"><input type="checkbox" name="joinChkRember"> Remember Me</label>
-							<a href="#" class="pull-right" id="linkforget">Forget Password?</a>
+							<a routerLink="/forgotpassword" class="pull-right" id="linkforget">Forget Password?</a>
 					</div>		
 	</form>
 					</div>
@@ -58,51 +56,5 @@
 					</div>
 				</div>
 			</div>
- 
 			
-		<!--/pop up Join form-->
-<div class="modal" id="popupJoinform" tabindex="-1">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="text-center">Join Us</h4>
-        </div>
-          <div class="modal-body">
-          <form (ngSubmit)="onSignup(f)" #f="ngForm">
-          <div class="text-center social-btn">
-            <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
-      <a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
-          </div>
-    <div class="or-seperator"><i>or</i></div>
-            <div class="form-group">
-              <input type="text" name="name" ngModel class="form-control" placeholder="Enter User Name" required>
-            </div>
-  
-            <div class="form-group">
-              <input type="text" name="email" ngModel class="form-control" placeholder="Enter User Email">
-            </div>
-  
-            <div class="form-group">
-              <input type="password" name="password" ngModel class="form-control" placeholder="Enter Password"required>
-            </div>
-  
-            <div class="form-group">
-              <input type="password" name="c_password" ngModel class="form-control" id="Confirm_Password" placeholder="Confirm Password" required>
-            </div>
-  
-            <div class="form-group">
-              <input type="tel" name="phone" ngModel class="form-control" placeholder="Enter Contact Number"required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-group-justified">Sign Up</button>
-            
-            <div class="checkbox">
-            <label><input type="checkbox" name="chkRember"> Remember Me</label>
-            </div>						
-          </form>
-          </div>
-          <div class="modal-footer">
-            <p>Not a Member Yet? <a href="#">Join Now</a></p>
-          </div>
-      </div></div>
-  </div>
-  
+	

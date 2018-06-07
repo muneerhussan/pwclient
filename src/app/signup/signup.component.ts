@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm}  from "@angular/forms";
-import { AuthService } from '../auth.service';
 import { error } from 'util';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+
+
 
 @Component({
   selector: 'app-signup',
@@ -20,6 +22,7 @@ export class SignupComponent implements OnInit {
     phone:null,
   }
 
+  public error=null;
   constructor(private authService:AuthService,
               private router: Router ) { }
 
@@ -33,8 +36,12 @@ export class SignupComponent implements OnInit {
 
     this.authService.signup(this.form)
     .subscribe(
-      Response=>console.log(Response),
-      error=>console.log(error),
+      error=>this.handleError(error),
     )
+  }
+
+  handleError(error)
+  {
+     this.error=error.message;
   }
 }
