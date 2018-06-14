@@ -38,6 +38,7 @@ import { ProfileHeaderComponent } from './layout/profile-header/profile-header.c
 import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
 import { GigListViewComponent } from './gig-list-view/gig-list-view.component';
 import { ManageRequestComponent } from './manage-request/manage-request.component';
+import { GigDetailComponent } from './gig-detail/gig-detail.component';
 
 import {SignupComponent}  from './signup/signup.component';
 import { AuthService } from './auth.service';
@@ -83,7 +84,8 @@ import { HttpModule } from '@angular/http';
     ProfileHeaderComponent,
     ProfileLayoutComponent,
     GigListViewComponent,
-    ManageRequestComponent
+    ManageRequestComponent,
+    GigDetailComponent
  ],
   imports: [
     

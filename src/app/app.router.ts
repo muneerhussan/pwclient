@@ -37,6 +37,7 @@ import { ProfileHeaderComponent } from './layout/profile-header/profile-header.c
 import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
 import { GigListViewComponent } from './gig-list-view/gig-list-view.component';
 import { ManageRequestComponent } from './manage-request/manage-request.component';
+import { GigDetailComponent } from './gig-detail/gig-detail.component';
 
  const router : Routes=[
    
@@ -82,6 +83,7 @@ import { ManageRequestComponent } from './manage-request/manage-request.componen
   {path:'settings',component:SettingsComponent},
   {path:'gig-listView',component:GigListViewComponent},
   {path:'manage-request',component:ManageRequestComponent},
+  {path:'gig-Detail',component:GigDetailComponent},
 ]
 },
   {path:'**',redirectTo:'/home',pathMatch:'full'},
