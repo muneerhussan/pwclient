@@ -1,0 +1,61 @@
+	<!--navbar and img slider-->
+  <div>
+		<nav class="navbar navbar-expand-lg navbar-default fixed-top">		
+		<!--main nav bar-->
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+	<a href="#" class="navbar-brand" style="padding-top:0px;">
+	<img src="assets/logo.png" alt="Logo" style="width:65px;"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right" style="margin-right:3px;">
+				<form class="navbar-form navbar-left">
+		<div class="input-group">
+		<input type="text" id="search" class="form-control" placeholder="Find Services">
+<span class="input-group-btn">
+  <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-search"style="color:white;padding:2px;"></span></button>
+ </span>
+		</div>
+		</form>
+				<li><a routerLink="/home" class="active">Home</a></li>
+				<li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a routerLink="/Carpenter" class="dropdown-item">Carpenter</a></li>
+					<li><a routerLink="/paint" class="dropdown-item">Decorator</a></li>
+					<li><a routerLink="/plumber" class="dropdown-item">Plumber</a></li>
+					<li><a routerLink="/gas" class="dropdown-item">Gas</a></li>
+					<li><a routerLink="/roofing" class="dropdown-item">Roofing</a></li>
+					<li><a routerLink="/handyman" class="dropdown-item">HandyMan</a></li>
+					<li><a routerLink="/lock" class="dropdown-item">Locks</a></li>
+					<li><a routerLink="/alarm" class="dropdown-item">Alarms</a></li>
+					<li><a routerLink="/clean" class="dropdown-item">Cleaner</a></li>
+					<li><a routerLink="/other" class="dropdown-item">Others</a></li>
+				</ul>
+				</li>
+				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Selling</a>
+				<ul class="dropdown-menu">
+					<li><a routerLink="/gig-listView" class="dropdown-item">Gigs</a></li>
+				</ul></li>
+				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Buying</a>
+				<ul class="dropdown-menu">
+					<li><a routerLink="/manage-request" class="dropdown-item">Manage Request</a></li>
+				</ul></li>
+				<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item dropdown">
+				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="assets/profile/me1.jpg" class="avatar" alt="Profile Img"><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a routerLink="/profile" class="dropdown-item"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+					<li><a routerLink="/settings" class="dropdown-item"><i class="glyphicon glyphicon-tasks"></i> Settings</a></li>
+					<li class="divider dropdown-divider"></li>
+					<li><a (click)="logout()"  class="dropdown-item"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+				</ul>
+			</li>
+		</ul>
+			</ul>
+			</div>
+		</nav>
+	</div>

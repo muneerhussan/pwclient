@@ -1,11 +1,8 @@
 import{ModuleWithProviders} from '@angular/core';
 import{Routes,RouterModule} from '@angular/router';
-
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
 import { ImagesliderComponent } from './imageslider/imageslider.component';
 import { ServicesBarComponent } from './services-bar/services-bar.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -14,7 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateGigComponent } from './create-gig/create-gig.component';
 import { SettingsComponent } from './settings/settings.component';
 import { DetailAboutUsComponent } from './detail-about-us/detail-about-us.component';
-import {AboutComponent} from './about/about.component';
+import { AboutComponent} from './about/about.component';
 import { MainPagaContentComponent } from './main-paga-content/main-paga-content.component';
 import { CarpenterComponent } from './carpenter/carpenter.component';
 import { ElectricsComponent } from './electrics/electrics.component';
@@ -32,10 +29,25 @@ import { CleanComponent } from './clean/clean.component';
 import { ServComponent } from './serv/serv.component';
 import { FrgtPaswrdComponent } from './frgt-paswrd/frgt-paswrd.component';
 import { RenewPassComponent } from './renew-pass/renew-pass.component';
+import { MainHeaderComponent } from './layout/main-header/main-header.component';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { ProfileHeaderComponent } from './layout/profile-header/profile-header.component';
+import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
+import { GigListViewComponent } from './gig-list-view/gig-list-view.component';
+import { ManageRequestComponent } from './manage-request/manage-request.component';
+import { SignupComponent } from './signup/signup.component';
+import { AuthGuard } from './auth.guard';
 
  const router : Routes=[
-  
+   
+  {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'home' , component:SiteLayoutComponent },
+  {
+    path:'',
+    component:MainLayoutComponent,
+    children:[
+
+  //site route goes here
   {path:'about' , component:AboutComponent },
   {path:'alarm' , component:AlarmComponent },
   {path:'carpenter' , component:CarpenterComponent },
@@ -50,16 +62,31 @@ import { RenewPassComponent } from './renew-pass/renew-pass.component';
   {path:'roof' , component:RoofComponent },
   {path:'security' , component:SecurityComponent },
   {path:'detailAboutUs' , component:DetailAboutUsComponent },
-  {path:'profile', component : ProfileComponent},
-  {path:'login', component: LoginComponent},
-  {path:'dashboard', component:DashboardComponent},
-  {path:'create_gig',component:CreateGigComponent},
-  {path:'settings',component:SettingsComponent},
   {path:'clean',component:CleanComponent},
   {path:'serv',component:ServComponent},
   {path:'forgetPassword',component:FrgtPaswrdComponent},
   {path:'renewPassword',component:RenewPassComponent},
-  {path:'',redirectTo:'/home',pathMatch:'full'},
+  {path:'login', component: LoginComponent},
+  {path: 'signup',component:SignupComponent},
+  
+]
+
+},
+
+//profile routes goes here
+{
+  path:'',
+  component:ProfileLayoutComponent,
+  children:[
+  {path:'profile', component : ProfileComponent,canActivate:[AuthGuard]},
+  {path:'login', component: LoginComponent},
+  {path:'dashboard', component:DashboardComponent,canActivate:[AuthGuard]},
+  {path:'create_gig',component:CreateGigComponent,canActivate:[AuthGuard]},
+  {path:'settings',component:SettingsComponent,canActivate:[AuthGuard]},
+  {path:'gig-listView',component:GigListViewComponent,canActivate:[AuthGuard]},
+  {path:'manage-request',component:ManageRequestComponent,canActivate:[AuthGuard]},
+]
+},
   {path:'**',redirectTo:'/home',pathMatch:'full'},
   ];
   export const routes:ModuleWithProviders = RouterModule.forRoot(router);

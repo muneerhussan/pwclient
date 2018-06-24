@@ -3,7 +3,7 @@ import {NgForm}  from "@angular/forms";
 import { error } from 'util';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../Services/auth.service';
 
 
 
@@ -22,26 +22,26 @@ export class SignupComponent implements OnInit {
     phone:null,
   }
 
+  showspinner:boolean=false;
+  private popup:boolean=false;
   public error=null;
   constructor(private authService:AuthService,
               private router: Router ) { }
 
-  ngOnInit() {
-  }
-
-  onSignUpbtnClick= function () {
-    this.router.navigate(['/dashboard']);
-};
+  ngOnInit() {}
   onSignup(form:NgForm){
 
-    this.authService.signup(this.form)
-    .subscribe(
-      error=>this.handleError(error),
-    )
+    this.authService.signup(this.form).subscribe((
+      this.showspinner=true,
+      this.popup=false,
+      data=>this.handleResponse(data)
+      
+    ));
   }
 
-  handleError(error)
+  handleResponse(error)
   {
      this.error=error.message;
+     this.showspinner=false;
   }
 }

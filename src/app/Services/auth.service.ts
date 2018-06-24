@@ -1,8 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Headers,Response } from "@angular/http";
 import {Observable} from "rxjs";
-import { LoginComponent } from "./login/login.component";
-import {SignupComponent}  from "./signup/signup.component";
 import {HttpClient} from '@angular/common/http';
 
 @Injectable()
@@ -21,4 +19,15 @@ constructor(private http : HttpClient){
             {
                 return  this.http.post('http://localhost:8000/api/login',data);
             }
+
+            
+            forgetpassword(data)
+            {
+                return  this.http.post('http://localhost:8000/api/password/email',data);
+            }
+            
+        resetPassword(data)
+        {
+            return this.http.post('http://localhost:8000/api/password/reset',data);
+        }
 }

@@ -1,425 +1,270 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	<title>Create a Gig</title>
-	
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
-	<div class="container-fluid">
-	<!--navbar and img slider-->
-	
-		<div>
-		<nav class="navbar navbar-expand-lg navbar-default fixed-top">		
-		<!--main nav bar-->
-			<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-	<a href="new1.html" class="navbar-brand" style="padding-top:0px;">
-	<img src="img1/logo.png" alt="Logo" style="width:65px;"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-right" style="margin-right:5px;">
-				<form class="navbar-form navbar-left">
-		<div class="input-group">
-		<input type="text" id="search" class="form-control" placeholder="Find Services">
-<span class="input-group-btn">
-  <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-search"style="color:white;padding:3px;"></span></button>
- </span>
-		</div>
-		</form>
-				<li><a href="new1.html" class="active">Home</a></li>
-				<li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
-				<ul class="dropdown-menu">					
-					<li><a href="Carpenter.html" class="dropdown-item">Carpenter</a></li>
-					<li><a href="paint.html" class="dropdown-item">Decorator</a></li>
-					<li><a href="plumber.html" class="dropdown-item">Plumber</a></li>
-					<li><a href="gas.html" class="dropdown-item">Gas</a></li>
-					<li><a href="roofing.html" class="dropdown-item">Roofing</a></li>
-					<li><a href="handyman.html" class="dropdown-item">HandyMan</a></li>
-					<li><a href="lock.html" class="dropdown-item">Locks</a></li>
-					<li><a href="alarm.html" class="dropdown-item">Alarms</a></li>
-					<li><a href="clean.html" class="dropdown-item">Cleaner</a></li>
-					<li><a href="other.html" class="dropdown-item">Others</a></li>
-				</ul>
-				</li>
-				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Selling</a>
-				<ul class="dropdown-menu">
-					<li><a href="#" class="dropdown-item">Orders</a></li>
-					<li><a href="gig.html" class="dropdown-item">Gigs</a></li>
-				</ul></li>
-				<li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Buying</a>
-				<ul class="dropdown-menu">
-					<li><a href="#" class="dropdown-item">How We Work</a></li>
-					<li><a href="manage-request.html" class="dropdown-item">Manage Request</a></li>
-				</ul></li>
-				<ul class="nav navbar-nav navbar-right">
-			<li class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="img/me1.jpg" class="avatar" alt="Avatar"><b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="profile.html" class="dropdown-item"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
-					<li><a href="setting.html" class="dropdown-item"><i class="glyphicon glyphicon-tasks"></i> Settings</a></li>
-					<li class="divider dropdown-divider"></li>
-					<li><a href="new1.html" class="dropdown-item"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
-				</ul>
-			</li>
-		</ul>
-			</ul>
-			</div>
-		</nav>
-	</div>
-	
 <div class="container-fluid" id="topbar">
-<!--gigs list view-->
-	  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#ovrview">Overview</a></li>
-    <li><a data-toggle="tab" href="#menuPrice">Pricing</a></li>
-    <li><a data-toggle="tab" href="#descriptionNew">Description & FAQ</a></li>
-    <li><a data-toggle="tab" href="#requirement">Requirement</a></li>
-  </ul>
-</div>
-
-<!-- Create a new Gig-->
-<div class="container-fluid">
-  <div class="tab-content newgig">
-  <!-- 1st tab-->
-    <div id="ovrview" class="tab-pane fade in active">
-	<div class="ovrview">
-		<div class="gigTitle">
-		<label>Gig Title</label><br>
-		<input type="text" name="gig-title">	
-		<form class="form">
-		<label>Category</label><br>
-		<select class="form-control" id="catgry">
-    <option disabled selected hidden>Select a Category</option>
-    <option>Graphics & Design</option>
-    <option>Digital Marketing</option>
-    <option>Writing & Translation</option>
-    <option>Video & Animation </option>
-    <option>Business</option>
-  </select>
-  </form><br>
-  <label>Search Tags</label><br>
-  <input type="search" name="srch-tag" id="tagSrch">
-		</div>	
-	<a class="btn btn-default btn-lg pull-left">Cancel</a>
-	<a class="btn btn-success btn-lg pull-right">Save and Continue</a>
-	</div>
-	</div>
-	<!-- 2nd tab-->
-	<div id="menuPrice" class="tab-pane fade">
-	<h3> Scope & Pricing</h3>
-	<div class="price-pkg" id="packg">
-	<table class=" table tabel-bordered tabel-hover">
-	<div class="row">
-	<thead>
-	<tr>
-	<th class="col-md-3"></th>
-	<th class="col-md-3">Basic</th>
-	<th class="col-md-3">Standard</th>
-	<th class="col-md-3">Premium</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-	
-	<td class="col-md-3" rowspan="4"><b>Revisions</b></td>
-	<td class="col-md-3" contenteditable="true">Name Your Package <span class="glyphicon glyphicon-pencil"></span></td>
-	<td class="col-md-3" contenteditable="true">Name Your Package <span class="glyphicon glyphicon-pencil"></span></td>
-	<td class="col-md-3" contenteditable="true">Name Your Package <span class="glyphicon glyphicon-pencil"></span></td>
-	</tr>
-	<tr>
-	<td class="col-md-3" contenteditable="true">Describe the details of your offering <span class="glyphicon glyphicon-pencil"></span></td>
-	<td class="col-md-3" contenteditable="true">Describe the details of your offering <span class="glyphicon glyphicon-pencil"></span></td>
-	<td class="col-md-3" contenteditable="true">Describe the details of your offering <span class="glyphicon glyphicon-pencil"></span></td>
-	</tr>
-	<tr>
-	<td class="col-md-3">
-	<select class="form-control" id="catgry">
-    <option disabled selected hidden>Delivery Time</option>
-    <option>1 Hour Delivery</option>
-    <option>2 Hour Delivery</option>
-    <option>3 Hour Delivery</option>
-    <option>5 Hour Delivery</option>
-    <option>1 Day Delivery</option>
-    <option>2 Day Delivery</option>
-    <option>1 week Delivery</option>
-  </select>
-	</td>
-	<td class="col-md-3">
-	<select class="form-control" id="catgry">
-    <option disabled selected hidden>Delivery Time</option>
-    <option>1 Hour Delivery</option>
-    <option>2 Hour Delivery</option>
-    <option>3 Hour Delivery</option>
-    <option>5 Hour Delivery</option>
-    <option>1 Day Delivery</option>
-    <option>2 Day Delivery</option>
-    <option>1 week Delivery</option>
-  </select>
+  <!--gigs list view-->
+      <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#ovrview">Overview</a></li>
+      <li><a data-toggle="tab" href="#menuPrice">Pricing</a></li>
+      <li><a data-toggle="tab" href="#descriptionNew">Description & FAQ</a></li>
+      <li><a data-toggle="tab" href="#requirement">Requirement</a></li>
+    </ul>
+  </div>
+  
+  <!-- Create a new Gig-->
+  <div class="container-fluid">
+    <div class="tab-content newgig">
+    <!-- 1st tab-->
+      <div id="ovrview" class="tab-pane fade in active">
+    <div class="ovrview">
+      <div class="gigTitle">
+      <label>Gig Title</label><br>
+      <input type="text" name="gig-title">	
+      <form class="form">
+      <label>Category</label><br>
+      <select class="form-control" id="catgry">
+      <option disabled selected hidden>Select a Category</option>
+      <option>Carpenter</option>
+      <option>Electrics</option>
+      <option>Decorator</option>
+      <option>Maintenance</option>
+      <option>Plumber</option>
+      <option>Gas</option>
+      <option>Security</option>
+      <option>Roofing</option>
+      <option>Handyman</option>
+      <option>Locks</option>
+      <option>Alarm</option>
+      <option>Clean</option>
+      <option>Others</option>
+    </select>
+    </form><br>
+    <label>Search Tags</label><br>
+    <input type="search" name="srch-tag" id="tagSrch">
+      </div>	
+    <a class="btn btn-default btn-lg pull-left">Cancel</a>
+    <a class="btn btn-success btn-lg pull-right">Save and Continue</a>
+    </div>
+    </div>
+    <!-- 2nd tab-->
+    <div id="menuPrice" class="tab-pane fade">
+    <h3> Scope & Pricing</h3>
+    <div class="price-pkg" id="packg">
+    <table class=" table tabel-bordered tabel-hover">
+    <div class="row">
+    <thead>
+    <tr>
+    <th class="col-md-3"></th>
+    <th class="col-md-3">Basic</th>
+    <th class="col-md-3">Standard</th>
+    <th class="col-md-3">Premium</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    
+    <td class="col-md-3" rowspan="4"><b>Revisions</b></td>
+    <td class="col-md-3" contenteditable="true">Name Your Package <span class="glyphicon glyphicon-pencil"></span></td>
+    <td class="col-md-3" contenteditable="true">Name Your Package <span class="glyphicon glyphicon-pencil"></span></td>
+    <td class="col-md-3" contenteditable="true">Name Your Package <span class="glyphicon glyphicon-pencil"></span></td>
+    </tr>
+    <tr>
+    <td class="col-md-3" contenteditable="true">Describe the details of your offering <span class="glyphicon glyphicon-pencil"></span></td>
+    <td class="col-md-3" contenteditable="true">Describe the details of your offering <span class="glyphicon glyphicon-pencil"></span></td>
+    <td class="col-md-3" contenteditable="true">Describe the details of your offering <span class="glyphicon glyphicon-pencil"></span></td>
+    </tr>
+    <tr>
+    <td class="col-md-3">
+    <select class="form-control" id="catgry">
+      <option disabled selected hidden>Delivery Time</option>
+      <option>1 Hour Delivery</option>
+      <option>2 Hour Delivery</option>
+      <option>3 Hour Delivery</option>
+      <option>5 Hour Delivery</option>
+      <option>1 Day Delivery</option>
+      <option>2 Day Delivery</option>
+      <option>1 week Delivery</option>
+    </select>
+    </td>
+    <td class="col-md-3">
+    <select class="form-control" id="catgry">
+      <option disabled selected hidden>Delivery Time</option>
+      <option>1 Hour Delivery</option>
+      <option>2 Hour Delivery</option>
+      <option>3 Hour Delivery</option>
+      <option>5 Hour Delivery</option>
+      <option>1 Day Delivery</option>
+      <option>2 Day Delivery</option>
+      <option>1 week Delivery</option>
+    </select>
+    </td>
+    <td class="col-md-3">
+    <select class="form-control" id="catgry">
+      <option disabled selected hidden>Delivery Time</option>
+      <option>1 Hour Delivery</option>
+      <option>2 Hour Delivery</option>
+      <option>3 Hour Delivery</option>
+      <option>5 Hour Delivery</option>
+      <option>1 Day Delivery</option>
+      <option>2 Day Delivery</option>
+      <option>1 week Delivery</option>
+    </select>
+    </td>
+    </tr>
+    <tr>
+    <td class="col-md-3">
+    <select class="form-control" id="catgry">
+      <option disabled selected hidden>Select</option>
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+    </td>
+    <td class="col-md-3">
+    <select class="form-control" id="catgry">
+      <option disabled selected hidden>Select</option>
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+    </td>
+    <td class="col-md-3">
+    <select class="form-control" id="catgry">
+      <option disabled selected hidden>Select</option>
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+    </td>
+    </tr>
+    <tr>
+    <td rowspan="1">Price</td>
+    <td>
+    <select class="form-control" id="catgry">
+      <option disabled selected hidden>$5-$995</option>
+      <option>$5</option>
+      <option>$10</option>
+      <option>$15</option>
+      <option>$20</option>
+      <option>$25</option>
+      <option>$30</option>
+      <option>$35</option>
+    </select>
   </td>
-	<td class="col-md-3">
-	<select class="form-control" id="catgry">
-    <option disabled selected hidden>Delivery Time</option>
-    <option>1 Hour Delivery</option>
-    <option>2 Hour Delivery</option>
-    <option>3 Hour Delivery</option>
-    <option>5 Hour Delivery</option>
-    <option>1 Day Delivery</option>
-    <option>2 Day Delivery</option>
-    <option>1 week Delivery</option>
-  </select>
-	</td>
-	</tr>
-	<tr>
-	<td class="col-md-3">
-	<select class="form-control" id="catgry">
-    <option disabled selected hidden>Select</option>
-    <option>0</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-	</td>
-	<td class="col-md-3">
-	<select class="form-control" id="catgry">
-    <option disabled selected hidden>Select</option>
-    <option>0</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-	</td>
-	<td class="col-md-3">
-	<select class="form-control" id="catgry">
-    <option disabled selected hidden>Select</option>
-    <option>0</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-	</td>
-	</tr>
-	<tr>
-	<td rowspan="1">Price</td>
-	<td>
-	<select class="form-control" id="catgry">
-    <option disabled selected hidden>$5-$995</option>
-    <option>$5</option>
-    <option>$10</option>
-    <option>$15</option>
-    <option>$20</option>
-    <option>$25</option>
-    <option>$30</option>
-    <option>$35</option>
-  </select>
-</td>
-<td>
-	<select class="form-control" id="catgry">
-    <option disabled selected hidden>$5-$995</option>
-    <option>$5</option>
-    <option>$10</option>
-    <option>$15</option>
-    <option>$20</option>
-    <option>$25</option>
-    <option>$30</option>
-    <option>$35</option>
-  </select>
-</td>
-<td>
-	<select class="form-control" id="catgry">
-    <option disabled selected hidden>$5-$995</option>
-    <option>$5</option>
-    <option>$10</option>
-    <option>$15</option>
-    <option>$20</option>
-    <option>$25</option>
-    <option>$30</option>
-    <option>$35</option>
-  </select>
-</td>
-	</tr>
-	</tbody>
-	</div>
-	</table>
-	</div>
-	<h4>My Gig Extras</h4>
-	<div class="price-pkg" id="packg">
-	<!--fastDeliver-->
-		<div id="extraFastDlvry">
-		<div id="fastDeliver">
-		<label>
-	 <input type="checkbox" class="form-check-input" data-toggle="collapse" data-target="#fastdelivery" aria-expanded="true" aria-controls="fastdelivery">
-          Extra fast Delivery</label>
+  <td>
+    <select class="form-control" id="catgry">
+      <option disabled selected hidden>$5-$995</option>
+      <option>$5</option>
+      <option>$10</option>
+      <option>$15</option>
+      <option>$20</option>
+      <option>$25</option>
+      <option>$30</option>
+      <option>$35</option>
+    </select>
+  </td>
+  <td>
+    <select class="form-control" id="catgry">
+      <option disabled selected hidden>$5-$995</option>
+      <option>$5</option>
+      <option>$10</option>
+      <option>$15</option>
+      <option>$20</option>
+      <option>$25</option>
+      <option>$30</option>
+      <option>$35</option>
+    </select>
+  </td>
+    </tr>
+    </tbody>
     </div>
-    <div id="fastdelivery" class="collapse" aria-labelledby="fastDeliver" data-parent="#extraFastDlvry">
-	 <form class="form-group form-inline form-justify">
-			 <label class="pull-left"> Basic </label>
-		<label class="pull-right">
-		<select class="form-control" id="catgry">
-    <option disabled selected hidden>Select</option>
-    <option>30 Minute</option>
-    <option>1 Hour</option>
-    <option>1 Hour, 30 Minute</option>
-    <option>2 Hour</option>
-    <option>3 Hour</option>
-  </select>I'll Deliver in only </label>
-  <label class="pull-right">
-		<select class="form-control" id="catgry">
-    <option disabled selected hidden>Select</option>
-    <option>$5</option>
-    <option>$10</option>
-    <option>$15</option>
-  </select> For an Extra </label>
-		</form>
-		</div>
-	</div>
-<div id="aditionReision">
-		<div id="revision">
-		<label>
-	 <input type="checkbox" class="form-check-input" data-toggle="collapse" data-target="#aditionRevise" aria-expanded="true" aria-controls="fastdelivery">
-          Additional Revision</label>
+    </table>
     </div>
-    <div id="aditionRevise" class="collapse" aria-labelledby="revision" data-parent="#aditionReision">
-	 <form class="form-group form-inline form-justify">
-		<label>I'll Deliver in only </label>
-		<select class="form-control" id="catgry">
-    <option disabled selected hidden>Select</option>
-    <option>30 Minute</option>
-    <option>1 Hour</option>
-    <option>1 Hour, 30 Minute</option>
-    <option>2 Hour</option>
-    <option>3 Hour</option>
-  </select>
-  <label> For an Extra </label>
-		<select class="form-control" id="catgry">
-    <option disabled selected hidden>Select</option>
-    <option>$5</option>
-    <option>$10</option>
-    <option>$15</option>
-  </select>
-		</form>
-		</div>
-	</div>
-	</div>
-	<a class="btn btn-success btn-lg pull-right">Save and Continue</a>
-	</div>
-    <!--3rd tab-->
-	<div id="descriptionNew" class="tab-pane fade">
-	<h3>Description</h3>
-	<h6>Briefly Describe Your Gig</h6>
-	<textarea rows="6"></textarea>
-	<a class="btn btn-success btn-lg pull-right">Save and Continue</a>
-	</div>
-	<!--4th tab-->
-	<div id="requirement" class="tab-pane fade">
-	<div class="tellRequirement">
-	<h5>Tell your buyer what you need to get started.</h5>
-	<p>Structure your Buyer instructions as free text, a multiple choice question or file upload.</p>
-	<div>
-	<p>Requirement #1</p>
-	<textarea rows="6"></textarea>
-	<a href="#" class="btn btn-default">Cancel</a>
-	<a href="#" class="btn btn-success">Add</a>
-	</div>
-	</div>
-	<a class="btn btn-success btn-lg pull-right">Save and Continue</a>
-	</div>
-</div>
-</div>
-<!--list in footer-->
- <section>
-        <div class="jumbotron">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="widget">
-                        <h4><b>Services</b></h4>
-                        <ul>
-                            <li><a href="paint.html">Decorating</a></li>
-                            <li><a href="plumber.html">Plumbering</a></li>
-                            <li><a href="lock.html">Locks & Glazing</a></li>
-                            <li><a href="electric.html">Electrical</a></li>
-							<li><a href="security.html">Security </a></li>
-                            <li><a href="clean.html">Cleaning</a></li>
-                            <li><a href="gas.html">Gas Check</a></li>
-							<li><a href="other.html">Others</a></li>
-                        </ul>
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="widget">
-                        <h4><b>About Us</b></h4>
-                        <p>A One Stop Shop for all your<br> Property Maintenance needs.<br>
-						As experts in the field with<br> many years in the business, <br>
-						our objective is simple:<br> to provide a superior service<br> at a very competitive price.</p>
-                    </div> 
-                </div><!--/.col-md-3-->
-
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="widget">
-                        <h4><b>Contact Details</b></h4>
-                        <p>Employment Resource Center<br>
-						  Model Town Lahore,Pakistan</p>
-						<p>Customer Care Line:<br>
-						+923046080781</p>
-                    </div>    
-                </div><!--/.col-md-3-->
-
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="widget">
-                        <h4><b>Opening Hours</b></h4>
-                        <p>We are open 24/7 for emergencies:<br>
-						Monday - Sunday</p>
-						
-                    </div>    
-                </div><!--/.col-md-3-->
-            </div>
-        </div>
-    </section>
-	<!--/#bottom-->
-    <footer id="foot">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2018 <a href="new1.html" title=" Waheed Shahzad">Resource Center</a>. All Rights Reserved.
-                </div>
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="new1.html">Home</a></li>
-                        <li class="nav-item"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Services <b class="caret"></b></a>
-				<ul class="dropdown-menu">					
-					<li><a href="#" class="dropdown-item">Carpenter</a></li>
-					<li><a href="#" class="dropdown-item">Decorator</a></li>
-					<li><a href="#" class="dropdown-item">Plumber</a></li>
-					<li><a href="#" class="dropdown-item">Gas</a></li>
-					<li><a href="#" class="dropdown-item">Roofing</a></li>
-					<li><a href="#" class="dropdown-item">HandyMan</a></li>
-					<li><a href="#" class="dropdown-item">Locks</a></li>
-					<li><a href="#" class="dropdown-item">Alarms</a></li>
-					<li><a href="#" class="dropdown-item">Cleaner</a></li>
-					<li><a href="#" class="dropdown-item">Others</a></li>
-				</ul>
-				</li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#popupLoginform">Sign In</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#popupJoinform">Join</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-	
-</div>
-</body>
-</html>
+    <h4>My Gig Extras</h4>
+    <div class="price-pkg" id="packg">
+    <!--fastDeliver-->
+      <div id="extraFastDlvry">
+      <div id="fastDeliver">
+      <label>
+     <input type="checkbox" class="form-check-input" data-toggle="collapse" data-target="#fastdelivery" aria-expanded="true" aria-controls="fastdelivery">
+            Extra fast Delivery</label>
+      </div>
+      <div id="fastdelivery" class="collapse" aria-labelledby="fastDeliver" data-parent="#extraFastDlvry">
+     <form class="form-group form-inline form-justify">
+         <label class="pull-left"> Basic </label>
+      <label class="pull-right">
+      <select class="form-control" id="catgry">
+      <option disabled selected hidden>Select</option>
+      <option>30 Minute</option>
+      <option>1 Hour</option>
+      <option>1 Hour, 30 Minute</option>
+      <option>2 Hour</option>
+      <option>3 Hour</option>
+    </select>I'll Deliver in only </label>
+    <label class="pull-right">
+      <select class="form-control" id="catgry">
+      <option disabled selected hidden>Select</option>
+      <option>$5</option>
+      <option>$10</option>
+      <option>$15</option>
+    </select> For an Extra </label>
+      </form>
+      </div>
+    </div>
+  <div id="aditionReision">
+      <div id="revision">
+      <label>
+     <input type="checkbox" class="form-check-input" data-toggle="collapse" data-target="#aditionRevise" aria-expanded="true" aria-controls="fastdelivery">
+            Additional Revision</label>
+      </div>
+      <div id="aditionRevise" class="collapse" aria-labelledby="revision" data-parent="#aditionReision">
+     <form class="form-group form-inline form-justify">
+      <label>I'll Deliver in only </label>
+      <select class="form-control" id="catgry">
+      <option disabled selected hidden>Select</option>
+      <option>30 Minute</option>
+      <option>1 Hour</option>
+      <option>1 Hour, 30 Minute</option>
+      <option>2 Hour</option>
+      <option>3 Hour</option>
+    </select>
+    <label> For an Extra </label>
+      <select class="form-control" id="catgry">
+      <option disabled selected hidden>Select</option>
+      <option>$5</option>
+      <option>$10</option>
+      <option>$15</option>
+    </select>
+      </form>
+      </div>
+    </div>
+    </div>
+    <a class="btn btn-success btn-lg pull-right">Save and Continue</a>
+    </div>
+      <!--3rd tab-->
+    <div id="descriptionNew" class="tab-pane fade">
+    <h3>Description</h3>
+    <h6>Briefly Describe Your Gig</h6>
+    <textarea rows="6"></textarea>
+    <a class="btn btn-success btn-lg pull-right">Save and Continue</a>
+    </div>
+    <!--4th tab-->
+    <div id="requirement" class="tab-pane fade">
+    <div class="tellRequirement">
+    <h5>Tell your buyer what you need to get started.</h5>
+    <p>Structure your Buyer instructions as free text, a multiple choice question or file upload.</p>
+    <div>
+    <p>Requirement #1</p>
+    <textarea rows="6"></textarea>
+    <a href="#" class="btn btn-default">Cancel</a>
+    <a href="#" class="btn btn-success">Add</a>
+    </div>
+    </div>
+    <a class="btn btn-success btn-lg pull-right">Save and Continue</a>
+    </div>
+  </div>
+  </div>
+  

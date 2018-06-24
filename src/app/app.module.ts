@@ -3,16 +3,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
 import{routes} from './app.router';
-import { AuthService } from './auth.service';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { Routes } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { SiteLayoutComponent } from './site-layout/site-layout.component';
 import { SignupComponent } from './signup/signup.component';
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
 import { ImagesliderComponent } from './imageslider/imageslider.component';
 import { ServicesBarComponent } from './services-bar/services-bar.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -36,27 +31,24 @@ import { OthersComponent } from './others/others.component';
 import { ServComponent } from './serv/serv.component';
 import { FrgtPaswrdComponent } from './frgt-paswrd/frgt-paswrd.component';
 import { RenewPassComponent } from './renew-pass/renew-pass.component';
-import { MainPagaContentComponent } from './main-paga-content/main-paga-content.component';
+import { MainHeaderComponent } from './layout/main-header/main-header.component';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { ProfileHeaderComponent } from './layout/profile-header/profile-header.component';
+import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
+import { GigListViewComponent } from './gig-list-view/gig-list-view.component';
+import { ManageRequestComponent } from './manage-request/manage-request.component';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { AboutComponent } from './about/about.component';
-import { CarpenterComponent } from './carpenter/carpenter.component';
 import { AlarmComponent } from './alarm/alarm.component';
+import { CarpenterComponent } from './carpenter/carpenter.component';
 import { CleanComponent } from './clean/clean.component';
 import { CreateGigComponent } from './create-gig/create-gig.component';
-import {HttpClientModule} from '@angular/common/http';
-const appRoutes : Routes=[
-  
-  {path:'home' , component:SiteLayoutComponent },
-  {path:'detailAboutUs' , component:DetailAboutUsComponent },
-  {path:'profile', component : ProfileComponent},
-  {path:'login', component: LoginComponent},
-  {path:'forgotpassword',component:FrgtPaswrdComponent},
-  {path:'dashboard', component:DashboardComponent},
-  {path:'create_gig',component:CreateGigComponent},
-  {path:'settings',component:SettingsComponent},
-  {path:'',redirectTo:'/home',pathMatch:'full'},
-  {path:'**',redirectTo:'/home',pathMatch:'full'},
-  
-]
+import { MainPagaContentComponent } from './main-paga-content/main-paga-content.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './Services/auth.service';
+import { AuthGuard } from './auth.guard';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -64,18 +56,15 @@ const appRoutes : Routes=[
     SignupComponent,
     LoginComponent,
     FooterComponent,
-    HeaderComponent,
     ImagesliderComponent,
     ServicesBarComponent,
     ProfileComponent,
     SiteLayoutComponent,
     DashboardComponent,
-    CreateGigComponent,
+    SignupComponent,
     SettingsComponent,
     DetailAboutUsComponent,
     ConfirmEqualValidatorDirective,
-    MainPagaContentComponent,
-    CarpenterComponent,
     ElectricsComponent,
     PaintComponent,
     MaintenanceComponent,
@@ -85,13 +74,23 @@ const appRoutes : Routes=[
     RoofComponent,
     HandymanComponent,
     LockComponent,
-    AlarmComponent,
     OthersComponent,
-    CleanComponent,
     ServComponent,
     FrgtPaswrdComponent,
     RenewPassComponent,
+    AlarmComponent,
+    MainHeaderComponent,
+    MainLayoutComponent,
+    ProfileHeaderComponent,
+    ProfileLayoutComponent,
+    GigListViewComponent,
+    ManageRequestComponent,
+    CarpenterComponent,
+    CleanComponent,
+    CreateGigComponent,
     AboutComponent,
+    MainPagaContentComponent,
+    LoadingSpinnerComponent,
  ],
   imports: [
     
@@ -100,8 +99,9 @@ const appRoutes : Routes=[
     BrowserModule,
     routes,
     HttpClientModule,
+  
   ],
-  providers: [AuthService],
+  providers: [AuthService,AuthGuard],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

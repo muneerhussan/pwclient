@@ -10,12 +10,10 @@ export class TokenService {
   handle(token)
     {
       this.set(token);
-      if(localStorage.getItem('token')!=null)
-      return true;
     }
     set(token){
-
         localStorage.setItem('token',token);
+        
     }
     remove()
     {
