@@ -3,69 +3,82 @@
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="text-center">Join Us</h4>
+        <h4 class="text-center" class="btn btn-primary btn-block btn-lg">Join Us</h4>
          </div>
           <div class="modal-body">
   <form #signupform="ngForm" (ngSubmit)="onSignup(signupform)">
+
+            <div class="alert alert-danger" [hidden]="!error">{{error}}</div>
+
+            <div>
+                <app-loading-spinner *ngIf="showspinner"></app-loading-spinner>
+            </div>
         
       <div class="form-group" [class.has-error]="fullnamecontroler.invalid && fullnamecontroler.touched"
           [class.has-success]="fullnamecontroler.valid">
-            <input required pattern="[a-zA-Z][a-zA-Z ]+"
-            type="text" name="name" autofocus="autofocus" [(ngModel)]="form.name"
+            <input type="text" name="name" autofocus="autofocus" [(ngModel)]="form.name" pattren="[a-zA-Z][a-zA-Z ]+"
             ngModel class="form-control" #fullnamecontroler="ngModel" placeholder="Enter User Name" required>
-            <span class="help-block" *ngIf="fullnamecontroler.invalid && fullnamecontroler.touched">
-              Name Required
-            </span>
-            <span class="help-block" *ngIf="fullnamecontroler.invalid && fullnamecontroler.errors.pattern ">
-             Name should be in alphabets
-            </span>
       </div>
+
+            <div class="alert alert-danger"  *ngIf="fullnamecontroler.touched && fullnamecontroler.errors?.required">
+                Name is Required
+            </div>
+            <div class="alert alert-danger" *ngIf="fullnamecontroler.errors?.pattren">
+                Name should be in Alphabets
+            </div>
 
 
           <div class="form-group" [class.has-error]="emailcontroller.invalid && emailcontroller.touched"
-          [class.has-success]="emailcontroller.valid">
-            <input type="text" required email name="email" [(ngModel)]="form.email"
-            required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-            ngModel class="form-control" #emailcontroller="ngModel" placeholder="Enter User Email">
-              <span class="help-block" *ngIf="emailcontroller.errors?.required && emailcontroller.touched">
-                Email is required
-              </span>
+              [class.has-success]="emailcontroller.valid">
+                <input type="text" name="email" [(ngModel)]="form.email"
+                 pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                ngModel class="form-control" #emailcontroller="ngModel" placeholder="Enter User Email" required>
           </div>
+
+              <div class="alert alert-danger"  *ngIf="emailcontroller.touched && emailcontroller.errors?.required">
+                  Email is Required
+              </div>
+              <div class="alert alert-danger" *ngIf="emailcontroller.touched && emailcontroller.errors?.pattern">
+                  provide a valid Email
+              </div>
 
           <div class="form-group" [class.has-error]="passwordcontroller.invalid && passwordcontroller.touched"
               [class.has-success]="passwordcontroller.valid">
                 <input required type="password" name="password"  [(ngModel)]="form.password"
                 ngModel class="form-control" #passwordcontroller="ngModel" placeholder="Enter Password">
-                <span class="help-block" *ngIf="passwordcontroller.touched && passwordcontroller.errors?.required">
-                Password Required
-                </span>
           </div>
+
+              <div class="alert alert-danger"  *ngIf="passwordcontroller.touched && passwordcontroller.errors?.required">
+                  Password is Required
+              </div>
 
           <div class="form-group" [class.has-error]="confirmpasscontroller.invalid && confirmpasscontroller.touched"
               [class.has-success]="confirmpasscontroller.valid">
-                <input appConfirmEqualValidator="password" required type="password" 
-                name="c_password" 
+                <input appConfirmEqualValidator="password" required type="password" name="c_password" 
                 [(ngModel)]="form.c_password"
                 ngModel class="form-control" #confirmpasscontroller="ngModel" placeholder="Confirm Password">
-                <span class="help-block" *ngIf="confirmpasscontroller.touched && confirmpasscontroller.errors?.required">
-                Confrimaion Password Required
-                </span>
-                  <span class="help-block"
+               
+                <div class="alert alert-danger"  *ngIf="confirmpasscontroller.touched && confirmpasscontroller.errors?.required">
+                    Password is Required
+                </div>
+                <div class="alert alert-danger"
                       *ngIf="confirmpasscontroller.touched && confirmpasscontroller.errors?.notEqual &&
                         !confirmpasscontroller.errors?.required">
-                       Password and Confirm Password does not match
-                  </span>
+                       Confirmation Failed
+                 </div>
           </div>
 
           <div class="form-group" [class.has-error]="phonecontroller.invalid && phonecontroller.touched"
           [class.has-success]="phonecontroller.valid">
-            <input type="text" name="phone" [(ngModel)]="form.phone" 
-            ng-minlength="10" ng-maxlength="10" required pattern="[0-9]*"
+            <input type="text" name="phone" [(ngModel)]="form.phone" pattern="[0-9]*"
             ngModel class="form-control" #phonecontroller="ngModel" placeholder="Contact No">
-              <span class="help-block" *ngIf="phonecontroller.errors?.required && phonecontroller.touched 
-              && phonecontroller.$errors?.number">
-                Contact No Required
-              </span>
+
+            <div class="alert alert-danger"  *ngIf="phonecontroller.touched && phonecontroller.errors?.required">
+                Contact No is Required is Required
+            </div>
+            <div class="alert alert-danger"  *ngIf="phonecontroller.errors?.pattern">
+                Provide Valid Phone Number
+            </div>
           </div>
 
           <button type="submit" class="btn btn-primary btn-block" [disabled]="signupform.invalid">Sign Up</button>
@@ -74,9 +87,6 @@
           <label><input type="checkbox" name="chkRember"> Remember Me</label>
           </div>						
         </form>
-        </div>
-        <div class="modal-footer">
-          <p>Not a Member Yet? <a href="#">Join Now</a></p>
         </div>
     </div></div>
 </div>

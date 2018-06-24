@@ -1,7 +1,5 @@
 import{ModuleWithProviders} from '@angular/core';
 import{Routes,RouterModule} from '@angular/router';
-
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
@@ -13,7 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateGigComponent } from './create-gig/create-gig.component';
 import { SettingsComponent } from './settings/settings.component';
 import { DetailAboutUsComponent } from './detail-about-us/detail-about-us.component';
-import {AboutComponent} from './about/about.component';
+import { AboutComponent} from './about/about.component';
 import { MainPagaContentComponent } from './main-paga-content/main-paga-content.component';
 import { CarpenterComponent } from './carpenter/carpenter.component';
 import { ElectricsComponent } from './electrics/electrics.component';
@@ -37,8 +35,8 @@ import { ProfileHeaderComponent } from './layout/profile-header/profile-header.c
 import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
 import { GigListViewComponent } from './gig-list-view/gig-list-view.component';
 import { ManageRequestComponent } from './manage-request/manage-request.component';
-import { GigDetailComponent } from './gig-detail/gig-detail.component';
-import {SignupComponent}  from './signup/signup.component';
+import { SignupComponent } from './signup/signup.component';
+import { AuthGuard } from './auth.guard';
 
  const router : Routes=[
    
@@ -69,22 +67,24 @@ import {SignupComponent}  from './signup/signup.component';
   {path:'forgetPassword',component:FrgtPaswrdComponent},
   {path:'renewPassword',component:RenewPassComponent},
   {path:'login', component: LoginComponent},
-  {path:'signup', component: SignupComponent},
+  {path: 'signup',component:SignupComponent},
+  
 ]
+
 },
+
 //profile routes goes here
 {
   path:'',
   component:ProfileLayoutComponent,
   children:[
-  {path:'profile', component : ProfileComponent},
+  {path:'profile', component : ProfileComponent,canActivate:[AuthGuard]},
   {path:'login', component: LoginComponent},
-  {path:'dashboard', component:DashboardComponent},
-  {path:'create_gig',component:CreateGigComponent},
-  {path:'settings',component:SettingsComponent},
-  {path:'gig-listView',component:GigListViewComponent},
-  {path:'manage-request',component:ManageRequestComponent},
-  {path:'gig-Detail',component:GigDetailComponent},
+  {path:'dashboard', component:DashboardComponent,canActivate:[AuthGuard]},
+  {path:'create_gig',component:CreateGigComponent,canActivate:[AuthGuard]},
+  {path:'settings',component:SettingsComponent,canActivate:[AuthGuard]},
+  {path:'gig-listView',component:GigListViewComponent,canActivate:[AuthGuard]},
+  {path:'manage-request',component:ManageRequestComponent,canActivate:[AuthGuard]},
 ]
 },
   {path:'**',redirectTo:'/home',pathMatch:'full'},

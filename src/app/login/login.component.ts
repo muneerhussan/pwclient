@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AuthService } from '../auth.service';
 import { error } from 'util';
 import { Router } from '@angular/router';
-import { Http } from '@angular/http';
+import { TokenService } from '../Services/token.service';
+import {HttpClient} from '@angular/common/http';
+import { AuthService } from '../Services/auth.service';
+import { DISABLED } from '@angular/forms/src/model';
+
 
 
 @Component({
@@ -17,22 +20,59 @@ export class LoginComponent implements OnInit {
     email:null,
     password:null,
   } 
-  
-  constructor(private authService:AuthService,
-              private router: Router) {
+  public error=null;
+  showspinner:boolean=false;
+  private popup:boolean=false;
+
+  constructor(
+              private router: Router,
+              private token:TokenService,
+              private http : HttpClient,
+              private authService:AuthService,
+            ) {
     
    }
   ngOnInit() {
   }
 
-  btnClick= function () {
-    this.router.navigate(['/dashboard']);
-};
+  resetForm(form? : NgForm)
+  {
+    if(form!=null)
+        form.pristine;
+          this.form={
+            email:'',
+          password:null,
+      } 
+      
+  }
 
-  onLogin(form:NgForm){
-    this.authService.login(this.form)
-    .subscribe(
-      error=>console.log(error)
-    )
+  private onLogin(form:NgForm){
+    this.authService.login(this.form).subscribe((
+      this.showspinner=true,
+      data=>this.handleResponse(data)
+    ));
+  }
+
+  handleResponse(data)
+  {
+     localStorage.setItem('token',data.data.api_key);
+     if(localStorage.getItem('token')===data.data.api_key && data.data.api_key !==null)
+     {
+       
+       this.router.navigate(['dashboard']);
+       this.popup=false;
+       
+      
+     }
+     else
+     {
+       
+      localStorage.removeItem('token');
+      this.resetForm();
+      this.showspinner=false;
+      this.error="User name or Passwrod is not correct";
+      
+     }
+     
   }
 }

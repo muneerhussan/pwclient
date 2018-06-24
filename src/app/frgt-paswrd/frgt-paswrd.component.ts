@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-frgt-paswrd',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrgtPaswrdComponent implements OnInit {
 
-  constructor() { }
+  public form={
+    email:null,
+  } 
+  public error=null;
+  constructor(private authService:AuthService) { }
 
   ngOnInit() {
   }
 
+  private forgetpass(form:NgForm){
+    this.authService.forgetpassword(this.form).subscribe(
+       error =>this.handleError(error)
+
+    );
+  }
+
+  handleError(error)
+  {
+     this.error=error.message;
+  }
 }

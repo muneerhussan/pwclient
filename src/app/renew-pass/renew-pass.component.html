@@ -1,12 +1,67 @@
-<div class="container-fluid">
-	<h2>ReNew Password</h2>
-		<div class="forgetpass">
-			<div class="content">
-			<label>Enter Your New Password:</label>
-			<input type="text" name="newpass">
-			<label>Re-Enter Your New Password:</label>
-			<input type="text" name="newpass1">
-				<input type="submit" name="newPassBtn" class="btn btn-success">
+
+<form #forgotpassword="ngForm" (ngSubmit)="forgetpass(forgotpassword)">
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="row">
+					<div class="col-md-4 col-md-offset-4">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="text-center">
+								  <h3><i class="fa fa-lock fa-4x"></i></h3>
+								  <h2 class="text-center">Reset Password</h2>
+								  <p>Fill Required Fields for New Password</p>
+									<div class="panel-body">
+									  
+									  <form  #resetpassword="ngForm" (ngSubmit)="onResetPassword(resetpassword)">
+										<fieldset>
+										  <div class="form-group">
+												<div class="alert alert-danger" [hidden]="!error">{{error}}</div>
+												<div class="form-group" [class.has-error]="emailcontroller.invalid && emailcontroller.touched"
+																[class.has-success]="emailcontroller.valid">
+																<input  type="text" required email name="email" [(ngModel)]="form.email"
+																pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+																ngModel class="form-control" #emailcontroller="ngModel" placeholder="Enter User Email">
+																
+																
+											    </div>
+										  </div>
+
+										  <div class="form-group">
+
+
+												
+												<div class="form-group" [class.has-error]="passwordcontroller.invalid && passwordcontroller.touched">
+																<input  type="password" name="password" [(ngModel)]="form.password"
+																ngModel class="form-control" #passwordcontroller="ngModel" placeholder="Enter your Password">
+																<span class="help-block" *ngIf="passwordcontroller.touched && passwordcontroller.errors?.required">
+																		Password Required
+																		</span>
+																
+											    </div>
+										  </div> 
+
+										  <div class="form-group">
+												
+												<div class="form-group" [class.has-error]="confirmController.invalid && confirmController.touched">
+																
+																<input  type="password"  name="confirm_password" [(ngModel)]="form.password_confirmation"
+																ngModel class="form-control" #confirmController="ngModel" placeholder="Confirmaiton">
+																
+											    </div> 
+										  </div> 
+
+										  <div class="form-group">
+											<input class="btn btn-lg btn-primary btn-block" value="Reset" [disabled]="resetpassword.invalid" type="submit">
+										  </div>
+										</fieldset>
+									  </form>
+									  
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
