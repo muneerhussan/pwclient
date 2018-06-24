@@ -37,6 +37,8 @@ import { ProfileHeaderComponent } from './layout/profile-header/profile-header.c
 import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
 import { GigListViewComponent } from './gig-list-view/gig-list-view.component';
 import { ManageRequestComponent } from './manage-request/manage-request.component';
+import { GigDetailComponent } from './gig-detail/gig-detail.component';
+
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AboutComponent } from './about/about.component';
@@ -85,12 +87,13 @@ import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.co
     ProfileLayoutComponent,
     GigListViewComponent,
     ManageRequestComponent,
+    GigDetailComponent,
+    AboutComponent,
     CarpenterComponent,
     CleanComponent,
     CreateGigComponent,
-    AboutComponent,
-    MainPagaContentComponent,
     LoadingSpinnerComponent,
+    MainPagaContentComponent
  ],
   imports: [
     

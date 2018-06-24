@@ -654,6 +654,7 @@ margin:auto;
 **************************/
 .listContain{
 	margin-top:15px;
+	margin-bottom:15px;
 	padding:0;
 	border:.5px solid #eee;
 	background-color:white;
@@ -799,7 +800,7 @@ color:black;
 	border:0.2px solid rgb(198,199,197);
 	font-size:16px;
 }
-#packg table tr td[rowspan]{
+#packg table tr td[rowspan], td[colspan]{
 	background-color:rgb(246,247,245);
 	border:0.2px solid rgb(198,199,197);
 }
@@ -877,7 +878,6 @@ color:black;
 	margin:3px;
 	font-size:12px;
 }
-
 .forgetpass{
 	width:65%;
 	background-color:white;
@@ -903,8 +903,155 @@ color:black;
 	width:100%;
 	margin-right:1%;
 	margin:1%;
-	
 }
+
+/**************************
+***   Gig Detail  Page ***
+**************************/
+
+.gigDetail{
+	width:80%;
+	margin:auto;
+	margin-top:30px;
+	margin-bottom:20px;
+	padding:0px;
+	display:flex;
+}
+.gigDetail span{
+	color:gold;
+	width:15px !important;
+	font-size:13px;
+}
+.gigDetailLeft{
+	width:65%;
+	margin:10px;
+	padding:10px;
+}
+.gigDetailRight{
+	width:35%;
+	margin:10px;
+	padding:10px;
+}
+.gigDetail .gigDetailLeft .firstDiv{
+	margin-bottom:10px;
+	border:.5px solid rgb(176,180,182);
+}
+.firstDiv .gig-detail-head{
+	margin:20px;
+	border-bottom:.5px solid rgb(176,180,182);
+}
+.gigDetail .gigDetailLeft .secondDiv{
+	background-color:white;
+	margin-top:20px; 
+	margin-bottom:10px;
+	box-sizing: border-box;
+	width:100%;
+}
+.gigDetail .gigDetailLeft .secondDiv table{
+	border:.5px solid rgb(176,180,182);
+}
+.secondDiv span{
+	color:green;
+	text-align:center;
+}
+#gigSpec span{
+	color:green;
+}
+.gigDetail .gigDetailLeft .secondDiv table tr td[rowspan], th[colspan]{
+	background-color:rgb(246,247,245);
+	padding:15px;
+}
+.gigDetail .gigDetailLeft .secondDiv table tr td,th{
+border:.5px solid rgb(176,180,182);
+padding:10px;
+width:33.33%;
+}
+.gigDetail .gigDetailLeft .secondDiv .btn{
+	width:130px;
+	height:50px;
+	font-size:15px;
+}
+.gigDetail .gigDetailLeft .thirdDiv{
+	margin-bottom:10px;
+	border:.5px solid rgb(176,180,182);
+	background-color:white;
+	padding:10px;
+}
+.gigDetail .gigDetailLeft .thirdDiv h2{
+	background:rgb(246,247,245);
+	padding:10px;
+	margin:5px;
+}
+.gigDetail .gigDetailLeft .reviewDiv{
+	margin-bottom:10px;
+	border:.5px solid rgb(176,180,182);
+	background-color:white;
+	padding:10px;
+}
+.gigDetail .gigDetailLeft .reviewDiv #noOfReview{
+	padding-bottom:35px;
+	margin:10px;
+	border-bottom:.5px solid rgb(176,180,182);	
+}
+#noOfReview select{
+	height:35px;
+	width:150px;
+	font-size:15px;
+	}
+.gigDetail .gigDetailLeft .reviewDiv .noOfReview1{
+	border-bottom:.5px solid rgb(176,180,182);
+	padding:10px;
+	margin:5px;
+}
+.gigComment{
+	border-bottom:.5px solid rgb(176,180,182);
+	padding:5px;
+	margin:5px;
+}
+.gigComment span{
+	width:10px !important;
+	font-size:8px;
+}
+.gigComment .userComent #userImage img{
+	border-radius: 50%;
+	width:50px;
+	height:50px;
+	float:left;
+	margin-right:15px;
+}
+.gigComment .honorComent #honorImage img{
+	border-radius: 50%;
+	width:30px;
+	height:30px;
+	float:left;
+	margin-right:15px;
+}
+.gigComment .honorComent{	
+	padding-left:60px;
+}
+
+.gigDetailRight #gigPackgList{
+	background-color:white;
+	border:.5px solid rgb(176,180,182);
+}
+.gigDetailRight .card{
+	padding:10px;
+}
+.gigDetailRight .first_section{
+	width:100%!important;
+}
+.gigDetailRight .first_section p{
+	font-size:14px;
+}
+.gigDetailRight span{
+	color:black;
+}
+#gigRate{
+	background-color:rgb(246,247,245);
+	padding:10px;
+	text-align:center;
+}
+
 
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -931,6 +1078,7 @@ h6{font-size:8.5px}
 p{font-size:7px}
 a{font-size:8px!important;}
 span{width:1.7%;}
+mark{font-size:10px;}
 #foot{padding-top:10px;padding-bottom:10px;font-size:11px;border-top:.1px solid gray;}
 #foot ul>li{margin-left:10px}
 .jumbotron p,a{font-size:8px}
@@ -974,7 +1122,7 @@ span{width:1.7%;}
 .onechild input[type=text], input[type=password] {padding:1% 2%;margin:3% 0;}
 .onechild form{padding:10px;}
 .onechild textarea,#exp_level,#eduCountry,#degreeTitle,#degreeYear,#award_year,#lang_level,input[type=text],input[type=password],input[type=tel]{font-size:8px;}
-#accordion{padding-bottom:10px;paddig-top:10px;}
+#accordion{padding-bottom:10px;padding-top:10px;}
 .onechild #add_language,#link_data,#skill,#education_data,#certification_data{padding-bottom:7px;padding-top:7px;}
 .profile-btn{padding:1.5% 2%;margin: 2% 2%;width:44%;}
 .mainpage-side-bar{margin-top:5px;padding-top:5px;width:100%;}
@@ -1030,8 +1178,25 @@ span{width:1.7%;}
 .deactive-acount{padding:10px;margin:auto;margin-bottom:10px;font-size:8px;}
 .new-gig .btn{margin:1.5px;font-size:8px;}
 
+.gigDetail{width:100%;margin-top:11px;margin-bottom:7px;display:flex;}
+.gigDetail span{width:3px;font-size:3px;}
+.gigDetailLeft{width:100%;margin:2px;padding:2px;}
+.gigDetailRight{margin:2px;padding:2px;}
+.firstDiv .gig-detail-head{margin:6px;}
+.gigDetail .gigDetailLeft .secondDiv{margin-top:6px;margin-bottom:2px;font-size:5px;}
+.gigDetail .gigDetailLeft .secondDiv samp{font-size:5px;}
+.gigDetail .gigDetailLeft .secondDiv table tr td[rowspan], th[colspan]{padding:3px;font-size:5px;}
+.gigDetail .gigDetailLeft .secondDiv .btn{width:50px;height:20px;font-size:6px;}
+.gigDetail .gigDetailLeft .reviewDiv #noOfReview{padding-bottom:15px;margin:1.5px;}
+.gigDetail .gigDetailLeft .reviewDiv span{display:none;}
+#noOfReview select{width:70px;height:16px;font-size:8px;}
+.gigComment span{width:2.3px;font-size:2.3px;}
+.gigComment .userComent #userImage img{width:20px;height:20px;margin-right:2px;}
+.gigComment .honorComent #honorImage img{width:12px;height:12px;margin-right:2px;}
+.gigComment .honorComent{padding:10px;}
+.gigDetailRight{display:none;}
+.noOfReview1{display:none;}
 }
-
 
 @media screen and (min-width:402px) and (max-width:509px)
 {
@@ -1044,6 +1209,7 @@ h6{font-size:10px}
 p{font-size:8px}
 a{font-size:9px!important;}
 span{width:2%;}
+mark{font-size:12px;}
 #foot{padding-top:10px;padding-bottom:10px;font-size:11px;border-top:.1px solid gray;}
 #foot ul>li{margin-left:10px}
 .jumbotron p,a{font-size:9px}
@@ -1086,7 +1252,7 @@ span{width:2%;}
 .onechild input[type=text], input[type=password] {padding:1% 2%;margin:3% 0;}
 .onechild form{padding:10px;}
 .onechild textarea,#exp_level,#eduCountry,#degreeTitle,#degreeYear,#award_year,#lang_level,input[type=text],input[type=password],input[type=tel]{font-size:9px;}
-#accordion{padding-bottom:10px;paddig-top:10px;}
+#accordion{padding-bottom:10px;padding-top:10px;}
 .onechild #add_language,#link_data,#skill,#education_data,#certification_data{padding-bottom:10px;padding-top:10px;}
 .profile-btn{padding:1.5% 2%;margin: 2% 2%;width:20%;}
 .mainpage-side-bar{margin-top:22px;padding-top:10px;max-width:190px;}
@@ -1142,8 +1308,26 @@ span{width:2%;}
 .deactive-acount{padding:12px;margin:auto;margin-bottom:12px;font-size:8px;}
 .new-gig .btn{margin:1.5px;font-size:8px;}
 
+.gigDetail{width:100%;margin-top:14px;margin-bottom:10px;display:flex;}
+.gigDetail span{width:5px;font-size:4.5px;}
+.gigDetailLeft{width:65%;margin:3px;padding:3px;}
+.gigDetailRight{width:35%;margin:3px;padding:3px;}
+.firstDiv .gig-detail-head{margin:10px;}
+.gigDetail .gigDetailLeft .secondDiv{margin-top:10px;margin-bottom:4px;font-size:6px;}
+.gigDetail .gigDetailLeft .secondDiv samp{font-size:6px;}
+.gigDetail .gigDetailLeft .secondDiv table tr td[rowspan], th[colspan]{padding:5px;font-size:6px;}
+.gigDetail .gigDetailLeft .secondDiv .btn{width:70px;height:30px;font-size:7px;}
+.gigDetail .gigDetailLeft .reviewDiv #noOfReview{padding-bottom:20px;margin:3px;}
+.gigDetail .gigDetailLeft .reviewDiv span{display:none;}
+#noOfReview select{width:80px;height:18px;font-size:8px;}
+.gigComment span{width:4px;font-size:4px;}
+.gigComment .userComent #userImage img{width:25px;height:25px;margin-right:6px;}
+.gigComment .honorComent #honorImage img{width:15px;height:15px;margin-right:6px;}
+.gigComment .honorComent{padding:13px;}
+.gigDetailRight #gigPackgList{padding:10px;margin-bottom:7px;}
+.gigDetailRight .card{padding:5px;}
+.gigDetailRight .first_section p{font-size:8px;}
 }
-
 
 @media screen and (min-width:510px) and (max-width:767px)
 {
@@ -1156,6 +1340,7 @@ h6{font-size:12px}
 p{font-size:10px}
 a{font-size:10px!important;}
 span{width:3.5%}
+mark{font-size:13px;}
 #foot{padding-top:15px;padding-bottom:15px;font-size:13px;border-top:.15px solid gray;}
 #foot ul>li{margin-left:12px}
 .jumbotron p,a{font-size:11px}
@@ -1198,8 +1383,8 @@ span{width:3.5%}
 .onechild input[type=text], input[type=password] {padding:1% 2%;margin:3% 0;}
 .onechild form{padding:11px;}
 .onechild textarea,#exp_level,#eduCountry,#degreeTitle,#degreeYear,#award_year,#lang_level,input[type=text],input[type=password],input[type=tel]{font-size:11px;}
-#accordion{padding-bottom:13px;paddig-top:13px;}
-.onechild #add_language,#link_data,#skill,#education_data,#certification_data{padding-bottom:13px;paddig-top:13px;}
+#accordion{padding-bottom:13px;padding-top:13px;}
+.onechild #add_language,#link_data,#skill,#education_data,#certification_data{padding-bottom:13px;padding-top:13px;}
 .profile-btn{padding:1.5% 2%;margin: 2% 2%;width:25%;}
 .mainpage-side-bar{margin-top:22px;padding-top:12px;max-width:250px;}
 .main-rslt{font-size:10px;line-height:1.5rem;padding:2px;width:100%;height:100%;}
@@ -1254,8 +1439,27 @@ span{width:3.5%}
 .deactive-acount{padding:15px;margin:auto;margin-bottom:15px;font-size:10px;}
 .new-gig .btn{margin:2px;font-size:10px;}
 
-
+.gigDetail{width:90%;margin-top:16px;margin-bottom:13px;display:flex;}
+.gigDetail span{width:7px;font-size:6px;}
+.gigDetailLeft{width:60%;margin:6px;padding:6px;}
+.gigDetailRight{width:40%;margin:6px;padding:6px;}
+.firstDiv .gig-detail-head{margin:14px;}
+.gigDetail .gigDetailLeft .secondDiv{margin-top:14px;margin-bottom:6px;font-size:8px;}
+.gigDetail .gigDetailLeft .secondDiv samp{font-size:8px;}
+.gigDetail .gigDetailLeft .secondDiv table tr td[rowspan], th[colspan]{padding:5px;font-size:8px;}
+.gigDetail .gigDetailLeft .secondDiv .btn{width:70px;height:35px;font-size:10px;}
+.gigDetail .gigDetailLeft .reviewDiv #noOfReview{padding-bottom:30px;margin:6px;}
+.gigDetail .gigDetailLeft .reviewDiv samp{display:none;}
+#noOfReview select{width:90px;height:22px;font-size:10px;}
+.gigComment span{width:6px;font-size:5px;}
+.gigComment .userComent #userImage img{width:30px;height:30px;margin-right:10px;}
+.gigComment .honorComent #honorImage img{width:20px;height:20px;margin-right:10px;}
+.gigComment .honorComent{padding:25px;}
+.gigDetailRight #gigPackgList{padding:13px;margin-bottom:9px;}
+.gigDetailRight .card{padding:6.5px;}
+.gigDetailRight .first_section p{font-size:10px;}
 }
+
 @media screen and (min-width:768px) and (max-width:991px)
 {
 h1{font-size:28px}
@@ -1267,6 +1471,7 @@ h6{font-size:15px}
 p{font-size:13px}
 a{font-size:13px!important;}
 span{width:4%}
+mark{font-size:14px;}
 #foot{padding-top:20px;padding-bottom:20px;font-size:14px;}
 #foot ul>li{margin-left:12px}
 .jumbotron p,a{font-size:12px}
@@ -1365,6 +1570,24 @@ span{width:4%}
 .deactive-acount{padding:17px;margin:auto;margin-bottom:17px;font-size:11px;}
 .new-gig .btn{margin:2px;font-size:11px;}
 
+.gigDetail{width:85%;margin-top:20px;margin-bottom:15px;display:flex;}
+.gigDetail span{width:12px;font-size:11px;}
+.gigDetailLeft{margin:8px;padding:8px;}
+.gigDetailRight{margin:8px;padding:8px;}
+.firstDiv .gig-detail-head{margin:17px;}
+.gigDetail .gigDetailLeft .secondDiv{margin-top:17px;margin-bottom:8px;font-size:10px;}
+.gigDetail .gigDetailLeft .secondDiv samp{font-size:10px;}
+.gigDetail .gigDetailLeft .secondDiv table tr td[rowspan], th[colspan]{font-size:10px;padding:10px;}
+.gigDetail .gigDetailLeft .secondDiv .btn{width:110px;height:45px;font-size:13px;}
+.gigDetail .gigDetailLeft .reviewDiv #noOfReview{padding-bottom:35px;margin:7px;}
+#noOfReview select{width:130px;height:28px;font-size:13px;}
+.gigComment span{width:8px;font-size:6.5px;}
+.gigComment .userComent #userImage img{width:40px;height:40px;margin-right:12px;}
+.gigComment .honorComent #honorImage img{width:25px;height:25px;margin-right:12px;}
+.gigComment .honorComent{padding:40px;}
+.gigDetailRight #gigPackgList{padding:12px;margin-bottom:11px;}
+.gigDetailRight .card{padding:8px;}
+.gigDetailRight .first_section p{font-size:11px;}
 }
 
 @media screen and (min-width:992px) and (max-width:1500px)
@@ -1473,6 +1696,24 @@ span{width:3%}
 .acount-seting, .security-seting, .notification{padding:20px;margin:auto;margin-bottom:20px;margin-top:20px;}
 .deactive-acount{padding:20px;margin:auto;margin-bottom:20px;font-size:12px;}
 .new-gig .btn{margin:3px;font-size:12px;}
+
+.gigDetail{width:85%;margin-top:20px;margin-bottom:15px;display:flex;}
+.gigDetail span{width:12px;font-size:11px;}
+.gigDetailLeft{margin:8px;padding:8px;}
+.gigDetailRight{margin:8px;padding:8px;}
+.firstDiv .gig-detail-head{margin:17px;}
+.gigDetail .gigDetailLeft .secondDiv{margin-top:17px;margin-bottom:8px;font-size:13px;}
+.gigDetail .gigDetailLeft .secondDiv samp{font-size:13px;}
+.gigDetail .gigDetailLeft .secondDiv table tr td[rowspan], th[colspan]{font-size:13px;padding:10px;}
+.gigDetail .gigDetailLeft .secondDiv .btn{width:120px;height:45px;font-size:14px;}
+.gigDetail .gigDetailLeft .reviewDiv #noOfReview{padding-bottom:35px;margin:7px;}
+#noOfReview select{width:130px;height:28px;font-size:13px;}
+.gigComment span{width:8px;font-size:6.5px;}
+.gigComment .userComent #userImage img{width:40px;height:40px;margin-right:12px;}
+.gigComment .honorComent #honorImage img{width:25px;height:25px;margin-right:12px;}
+.gigComment .honorComent{padding:40px;}
+.gigDetailRight #gigPackgList{padding:12px;margin-bottom:11px;}
+.gigDetailRight .card{padding:8px;}
 
 }
 

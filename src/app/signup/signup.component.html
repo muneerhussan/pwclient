@@ -13,6 +13,7 @@
             <div>
                 <app-loading-spinner *ngIf="showspinner"></app-loading-spinner>
             </div>
+        
       <div class="form-group" [class.has-error]="fullnamecontroler.invalid && fullnamecontroler.touched"
           [class.has-success]="fullnamecontroler.valid">
             <input type="text" name="name" autofocus="autofocus" [(ngModel)]="form.name" pattren="[a-zA-Z][a-zA-Z ]+"
@@ -80,7 +81,7 @@
             </div>
           </div>
 
-          <button type="submit" class="btn btn-primary" [disabled]="signupform.invalid">Sign Up</button>
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="signupform.invalid">Sign Up</button>
           
           <div class="checkbox">
           <label><input type="checkbox" name="chkRember"> Remember Me</label>
